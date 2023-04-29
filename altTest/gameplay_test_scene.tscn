@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://50x8ejo08l3x"]
+[gd_scene load_steps=7 format=3 uid="uid://c2imcckpkcrf6"]
 
 [ext_resource type="Texture2D" uid="uid://c378xu5axwoot" path="res://altTest/Scene.png" id="1_i6mnd"]
+[ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="2_br42v"]
+[ext_resource type="Texture2D" uid="uid://dgwvycpin6fhr" path="res://altTest/Room01.png" id="2_jhkiy"]
 [ext_resource type="PackedScene" uid="uid://dpi88ttcv1b5j" path="res://characters/player/player.tscn" id="2_kmpdx"]
 [ext_resource type="PackedScene" uid="uid://bhykanwm2lxto" path="res://assets/Item.tscn" id="3_wd7pf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vnodh"]
+shader = ExtResource("2_br42v")
+shader_parameter/pixelSize = 3
 
 [node name="gameplay_test_scene" type="Node2D"]
 
@@ -12,8 +18,21 @@ scale = Vector2(0.848958, 0.848958)
 texture = ExtResource("1_i6mnd")
 metadata/_edit_lock_ = true
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 1118.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 1)
+
+[node name="Room01" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vnodh")
+position = Vector2(777, 228.75)
+scale = Vector2(0.660807, 0.660807)
+texture = ExtResource("2_jhkiy")
+
 [node name="Player" parent="." instance=ExtResource("2_kmpdx")]
-position = Vector2(381, 236)
+position = Vector2(404, 276)
 
 [node name="Item" parent="." instance=ExtResource("3_wd7pf")]
 position = Vector2(715, 236)
