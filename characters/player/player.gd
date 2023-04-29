@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 		body.speed_scale = 1
 	else:
 		animation_player.play("walk_1")
-		body.speed_scale = abs(velocity.x/100)
+		body.speed_scale = abs(velocity.x/80)
 		
 func _physics_process(_delta: float) -> void:
 
