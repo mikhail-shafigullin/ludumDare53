@@ -1,5 +1,12 @@
 extends CharacterBody2D
-@export var speed := 500
+@export var speed := 200
+@onready var body = $Body
+@onready var animation_player = $AnimationPlayer
+
+
+
+var is_walking_left := true
+var is_running := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -7,22 +14,36 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
+func _process(delta: float) -> void:
+	body.flip_h = !is_walking_left;
+	
+	if abs(velocity.x) < 1:
+		animation_player.play("idle_1")
+		body.speed_scale = 1
+	else:
+		animation_player.play("walk_1")
+		body.speed_scale = abs(velocity.x/110)
+		
 func _physics_process(_delta: float) -> void:
-	# Once again, we call `Input.get_action_strength()` to support analog movement.
+
 	var direction := Vector2(
-		# This first line calculates the X direction, the vector's first component.
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
-		# And here, we calculate the Y direction. Note that the Y-axis points 
-		# DOWN in games.
-		# That is to say, a Y value of `1.0` points downward.
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	)
-	# When aiming the joystick diagonally, the direction vector can have a length 
-	# greater than 1.0, making the character move faster than our maximum expected
-	# speed. When that happens, we limit the vector's length to ensure the player 
-	# can't go beyond the maximum speed.
+	
+	is_running = Input.get_action_strength("run")
+
+	
+	direction *= Vector2(1, 0)
+	
+	
+	if direction.x != 0:
+		is_walking_left = direction.x < 0
+
 	if direction.length() > 1.0:
 		direction = direction.normalized()
+		
+	if is_running:
+		direction *= Vector2(2,1.5)
 	velocity = speed * direction
 	move_and_slide()

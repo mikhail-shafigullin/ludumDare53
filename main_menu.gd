@@ -9,9 +9,7 @@ func _ready():
 	test_button.pressed.connect(nn_test)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
 
 func nn_test():
 	var nn_scene = load("res://test/nn_test.tscn").instantiate()
