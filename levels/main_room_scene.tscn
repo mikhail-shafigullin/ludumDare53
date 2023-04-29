@@ -40,13 +40,14 @@ texture = ExtResource("3_6d7ua")
 position = Vector2(404, 295)
 
 [node name="DoorToTheHallway" parent="." instance=ExtResource("5_gtyru")]
-position = Vector2(209, 267)
+position = Vector2(220, 271)
+USE_MESSAGE = "Go to the hallway?"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(211, 46)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-100, 203)
+position = Vector2(-100, 195)
 shape = SubResource("RectangleShape2D_f1mlj")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
@@ -54,7 +55,8 @@ position = Vector2(829, 186)
 shape = SubResource("RectangleShape2D_f1mlj")
 
 [node name="DoorToTheBalcony" parent="." instance=ExtResource("5_gtyru")]
-position = Vector2(934, 270)
+position = Vector2(920, 269)
+USE_MESSAGE = "Go to the balcony?"
 
 [connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
 [connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]

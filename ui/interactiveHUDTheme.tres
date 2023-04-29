@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://b5ggkow6gcor7"]
+
+[resource]
+default_font_size = 32
+/colors/baseColor = Color(1, 1, 1, 1)
+/font_sizes/interactiveHUDFont = 32
+/fonts/baseFont = null
