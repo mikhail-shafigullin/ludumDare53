@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dpi88ttcv1b5j"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_13kwh"]
-[ext_resource type="SpriteFrames" uid="uid://4u2aqe0ynb5w" path="res://characters/player/player_sframes.tres" id="2_3sp68"]
+[ext_resource type="SpriteFrames" uid="uid://cmgdosrsnr8h8" path="res://characters/player/player_sframes.tres" id="2_3sp68"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6wnhg"]
 radius = 11.0
