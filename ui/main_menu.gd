@@ -17,5 +17,5 @@ func nn_test():
 
 
 func _on_gameplay_test_pressed():
-	get_tree().change_scene_to_file("res://altTest/gameplay_test_scene.tscn")
+	get_tree().change_scene_to_file("res://levels/main_room_scene.tscn")
 

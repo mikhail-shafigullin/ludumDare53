@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhmfvrcbx4eei"]
+
+[ext_resource type="Script" path="res://levels/main_room_scene.gd" id="1_r42hg"]
+[ext_resource type="Texture2D" uid="uid://c378xu5axwoot" path="res://altTest/Scene.png" id="1_tr38i"]
+[ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="2_w5cku"]
+[ext_resource type="Texture2D" uid="uid://dgwvycpin6fhr" path="res://altTest/Room01.png" id="3_6d7ua"]
+[ext_resource type="PackedScene" uid="uid://dpi88ttcv1b5j" path="res://characters/player/player.tscn" id="4_yspwa"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="5_gtyru"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nkff4"]
+shader = ExtResource("2_w5cku")
+shader_parameter/pixelSize = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1mlj"]
+size = Vector2(152, 394)
+
+[node name="main_room_scene" type="Node2D"]
+script = ExtResource("1_r42hg")
+
+[node name="Scene" type="Sprite2D" parent="."]
+position = Vector2(575, 326)
+scale = Vector2(0.848958, 0.848958)
+texture = ExtResource("1_tr38i")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 25.0
+offset_top = 24.0
+offset_right = 1118.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 1)
+
+[node name="Room01" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_nkff4")
+position = Vector2(777, 228.75)
+scale = Vector2(0.660807, 0.660807)
+texture = ExtResource("3_6d7ua")
+
+[node name="Player" parent="." instance=ExtResource("4_yspwa")]
+position = Vector2(404, 295)
+
+[node name="DoorToTheHallway" parent="." instance=ExtResource("5_gtyru")]
+position = Vector2(209, 267)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(211, 46)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-100, 203)
+shape = SubResource("RectangleShape2D_f1mlj")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(829, 186)
+shape = SubResource("RectangleShape2D_f1mlj")
+
+[node name="DoorToTheBalcony" parent="." instance=ExtResource("5_gtyru")]
+position = Vector2(934, 270)
+
+[connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
+[connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]

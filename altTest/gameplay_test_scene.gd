@@ -9,3 +9,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_door_to_the_hallway_object_used():
+	print('Go to the hallway');
+
+
+func _on_door_to_the_balcony_object_used():
+	print('Go to the balcony');

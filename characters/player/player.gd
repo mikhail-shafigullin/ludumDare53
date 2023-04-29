@@ -3,10 +3,12 @@ extends CharacterBody2D
 @onready var body = $Body
 @onready var animation_player = $AnimationPlayer
 
-
+signal usable_object_hovered(usable_object);
+signal usable_object_unhovered(usable_object);
 
 var is_walking_left := true
 var is_running := false
+var hovered_item: Node2D;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,6 +26,11 @@ func _process(delta: float) -> void:
 		animation_player.play("walk_1")
 		body.speed_scale = abs(velocity.x/80)
 		
+	var is_item_used = Input.is_action_just_pressed("use");
+	if is_item_used && hovered_item :
+		hovered_item.emit_signal('object_used');
+
+
 func _physics_process(_delta: float) -> void:
 
 	var direction := Vector2(
@@ -47,3 +54,13 @@ func _physics_process(_delta: float) -> void:
 		direction *= Vector2(2,1.5)
 	velocity = speed * direction
 	move_and_slide()
+
+
+func _on_usable_object_hovered(usable_object: Node2D):
+	print('player hover usable_object');
+	hovered_item = usable_object;
+
+
+func _on_usable_object_unhovered(usable_object):
+	print('player unhover usable_object');
+	hovered_item = null;
