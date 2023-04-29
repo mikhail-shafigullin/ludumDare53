@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://cimfy6pk0vvv5"]
+[gd_scene load_steps=100 format=3 uid="uid://cimfy6pk0vvv5"]
 
 [ext_resource type="Texture2D" uid="uid://dsi54os3mqmf2" path="res://test/walkTestBlur/0001.png" id="1_1tf0h"]
 [ext_resource type="Texture2D" uid="uid://bj8lcma1ntm14" path="res://test/walkTest/0001.png" id="1_ap3ax"]
@@ -97,6 +97,7 @@
 [ext_resource type="Texture2D" uid="uid://dvd16dcqnuu1h" path="res://test/walkTest/0048.png" id="48_ifg2p"]
 [ext_resource type="Texture2D" uid="uid://cqhr7pyygvdvu" path="res://test/walkTest/0049.png" id="49_iromx"]
 [ext_resource type="Texture2D" uid="uid://bf51hsmwn0yt7" path="res://test/walkTest/0050.png" id="50_ehjw8"]
+[ext_resource type="PackedScene" uid="uid://cupta5d21te5m" path="res://test/walkerTest.tscn" id="98_l54ri"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6r6ra"]
 animations = [{
@@ -445,3 +446,6 @@ root_node = NodePath("../AnimatedSprite2D")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D2")
+
+[node name="WalkerTest" parent="." instance=ExtResource("98_l54ri")]
+position = Vector2(247, 152)
