@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3pvj0n246moy"]
-
-[ext_resource type="PackedScene" uid="uid://bylfibide55fs" path="res://main_menu.tscn" id="1_551oi"]
-
-[node name="Main" type="Node"]
-
-[node name="MainMenu" parent="." instance=ExtResource("1_551oi")]
-size_flags_horizontal = 6
-size_flags_vertical = 6
