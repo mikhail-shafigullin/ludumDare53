@@ -26,8 +26,8 @@ texture_filter = 5
 position = Vector2(429, 163)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("98_ect28")
-animation = &"idle"
-autoplay = "idle"
+animation = &"sad"
+autoplay = "sad"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 5
@@ -36,14 +36,7 @@ scale = Vector2(2, 2)
 sprite_frames = ExtResource("98_ect28")
 animation = &"walk1"
 autoplay = "walk1"
-frame_progress = 0.204469
 flip_h = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AnimatedSprite2D")
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AnimatedSprite2D2")
 
 [node name="Player" parent="." instance=ExtResource("99_8q4ce")]
 position = Vector2(311, 228)
