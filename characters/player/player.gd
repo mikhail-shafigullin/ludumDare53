@@ -18,11 +18,11 @@ func _process(delta: float) -> void:
 	body.flip_h = !is_walking_left;
 	
 	if abs(velocity.x) < 1:
-		animation_player.play("idle_1")
+		animation_player.play("idle_90")
 		body.speed_scale = 1
 	else:
 		animation_player.play("walk_1")
-		body.speed_scale = abs(velocity.x/110)
+		body.speed_scale = abs(velocity.x/100)
 		
 func _physics_process(_delta: float) -> void:
 
