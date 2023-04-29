@@ -20,6 +20,10 @@ config/icon="res://ico.png"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://state.gd"
 
+[dialogue_manager]
+
+general/states=["State"]
+
 [dotnet]
 
 project/assembly_name="LudumDare_53"

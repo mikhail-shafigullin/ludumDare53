@@ -1,5 +1,6 @@
 class_name BaseDialogueTestScene extends Node2D
 
+const Balloon = preload("res://assets/dialogue/ballon/balloon.tscn")
 
 const DialogueSettings = preload("res://addons/dialogue_manager/components/settings.gd")
 
@@ -15,8 +16,14 @@ func _ready():
 	
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
-	DialogueManager.show_example_dialogue_balloon(resource, title)
-
+	if State.player_is_busy:
+		return
+	
+	State.player_is_busy = true
+	var balloon: Node = Balloon.instantiate()
+	get_tree().current_scene.add_child(balloon)
+	balloon.start(resource, "start")
+	balloon.tree_exiting.connect(func(): State.player_is_busy = false)
 
 func _enter_tree() -> void:
 	DialogueSettings.set_user_value("is_running_test_scene", false)

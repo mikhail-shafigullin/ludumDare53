@@ -11,8 +11,8 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	if body == player:
-		player.get_node("AnimationPlayer").play("idle_1")
+		player.get_node("AnimationPlayer").play("idle_90")
 
 
 func _on_usable_object_object_used():
-	DialogueManager.show_example_dialogue_balloon(load("res://assets/dialogue/test.dialogue"))
+	$UsableObject.play_dialogue("res://assets/dialogue/test.dialogue")
