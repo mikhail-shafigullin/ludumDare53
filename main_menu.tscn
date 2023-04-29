@@ -29,8 +29,14 @@ grow_vertical = 2
 layout_mode = 2
 text = "nn test"
 
+[node name="gameplayTest" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "GameplayTest"
+
 [node name="Exit" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 text = "exit
 "
+
+[connection signal="pressed" from="VBoxContainer/gameplayTest" to="." method="_on_gameplay_test_pressed"]

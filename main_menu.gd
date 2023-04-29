@@ -18,3 +18,10 @@ func nn_test():
 	get_tree().get_root().add_child(nn_scene)
 	
 	queue_free()
+
+
+func _on_gameplay_test_pressed():
+	var nn_scene = load("res://altTest/gameplay_test_scene.tscn").instantiate()
+	get_tree().get_root().add_child(nn_scene)
+	
+	queue_free()
