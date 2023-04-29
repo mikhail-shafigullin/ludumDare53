@@ -80,7 +80,7 @@ shape = SubResource("CapsuleShape2D_ajbhg")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_3sp68")
-animation = &"walk_1"
+animation = &"idle_1"
 autoplay = "sad_walk"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
