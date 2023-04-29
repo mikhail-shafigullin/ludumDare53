@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="LudumDare_53"
+run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,6 +23,10 @@ project/assembly_name="LudumDare_53"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [rendering]
 
