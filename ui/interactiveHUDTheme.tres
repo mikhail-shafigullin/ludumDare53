@@ -1,7 +1,10 @@
-[gd_resource type="Theme" format=3 uid="uid://b5ggkow6gcor7"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b5ggkow6gcor7"]
+
+[ext_resource type="FontFile" uid="uid://55qf55hy1h6o" path="res://fonts/Ysabeau-Medium.ttf" id="1_u857g"]
 
 [resource]
-default_font_size = 32
+default_font = ExtResource("1_u857g")
+default_font_size = 28
 /colors/baseColor = Color(1, 1, 1, 1)
 /font_sizes/interactiveHUDFont = 32
-/fonts/baseFont = null
+/fonts/baseFont = ExtResource("1_u857g")

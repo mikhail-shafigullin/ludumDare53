@@ -26,5 +26,6 @@ offset_left = 282.0
 offset_top = 465.0
 offset_right = 1086.0
 offset_bottom = 607.0
+scale = Vector2(1.00294, 1.00804)
 theme = ExtResource("1_okety")
 text = "Text "
