@@ -24,6 +24,10 @@ State="*res://state.gd"
 
 general/states=["State"]
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="LudumDare_53"
