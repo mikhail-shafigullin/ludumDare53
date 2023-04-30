@@ -1,11 +1,11 @@
 extends Node2D
+@onready var ihud = $interactiveHud
 
 var transitionScenePath: String;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	State.sceneManager = self;
-
+	State.sceneManager = self
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

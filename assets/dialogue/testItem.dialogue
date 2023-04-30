@@ -1,5 +1,16 @@
 ~ this_is_a_node_title
 
-This is a test item
+This is a test item.
+
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://test/walk_sad/0012.png")
+And this is a novel mode
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+Image change 
+
+do State.sceneManager.ihud.novel_hide()
+Game [wait=1] You can move now
+set State.player_is_busy = true
+And now you cannot
 
 => END

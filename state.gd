@@ -6,4 +6,3 @@ var player_is_busy := false
 var player: Node2D;
 var location: LocationState;
 var sceneManager: Node2D;
-
