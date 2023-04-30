@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://gy18rk6wed3d"]
+
+[ext_resource type="Script" path="res://ui/debugMenu.gd" id="1_e5e7l"]
+
+[node name="debugMenu" type="CanvasLayer"]
+script = ExtResource("1_e5e7l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -143.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="1DayButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "1 day"
+
+[node name="2DayButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "2 day"
+
+[node name="3DayButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "3 day"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="4DayButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "4 day"
+
+[node name="5DayButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "5 day"
+
+[node name="6DayButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "6 day"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/1DayButton" to="." method="_on_1_day_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/2DayButton" to="." method="_on_2_day_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/3DayButton" to="." method="_on_3_day_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/4DayButton" to="." method="_on_4_day_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/5DayButton" to="." method="_on_5_day_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/6DayButton" to="." method="_on_6_day_button_pressed"]

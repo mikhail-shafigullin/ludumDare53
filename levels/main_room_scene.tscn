@@ -43,10 +43,10 @@ position = Vector2(920, 269)
 USE_MESSAGE = "Go to the balcony?"
 
 [node name="StartMarker" type="Marker2D" parent="."]
-position = Vector2(467, 295)
+position = Vector2(687, 295)
 
 [node name="TestItem" parent="." instance=ExtResource("7_1le5h")]
-position = Vector2(642, 263)
+position = Vector2(531, 263)
 
 [node name="Marker_fromHallway" type="Marker2D" parent="."]
 position = Vector2(220, 295)
