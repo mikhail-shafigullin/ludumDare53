@@ -1,10 +1,13 @@
 extends CanvasLayer
 @onready var novel = $Novel
+@onready var item_icon = $Item/ItemIcon
+@onready var item_name = $Item/ItemName
+@onready var item = $Item
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	State.ihud = self
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,3 +24,13 @@ func novel_hide() -> void:
 
 func novel_set_image(imagePath: String) -> void:
 	novel.get_node("Image").texture = load(imagePath)
+
+func item_set_image(imageTexture: Texture) -> void:
+	item_icon.texture = imageTexture
+
+func item_set_name(_name: String) -> void:
+	item.show()
+	item_name.text = _name
+
+func item_clear() -> void:
+	item.hide()

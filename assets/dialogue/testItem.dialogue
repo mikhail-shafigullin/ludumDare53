@@ -2,13 +2,13 @@
 
 This is a test item.
 
-do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://characters/player/fly2.png")
+do State.ihud.novel_show()
+do State.ihud.novel_set_image("res://characters/player/fly2.png")
 And this is a novel mode
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.ihud.novel_set_image("res://characters/player/Playsholder.png")
 Image change 
 
-do State.sceneManager.ihud.novel_hide()
+do State.ihud.novel_hide()
 Game [wait=1] You can move now
 set State.player_is_busy = true
 And now you cannot

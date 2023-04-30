@@ -73,8 +73,20 @@ func _physics_process(_delta: float) -> void:
 func _on_usable_object_hovered(usable_object: Node2D):
 	print('player hover usable_object');
 	hovered_item = usable_object;
+	if State.ihud:
+		if hovered_item.USE_MESSAGE:
+			State.ihud.item_set_name(hovered_item.USE_MESSAGE)
+		else:
+			State.ihud.item_set_name("Use?")
+			
+		if hovered_item.USE_TEXTURE:
+			State.ihud.item_set_image(hovered_item.USE_TEXTURE)
+		else:
+			State.ihud.item_set_image(null)
 
 
 func _on_usable_object_unhovered(usable_object):
 	print('player unhover usable_object');
 	hovered_item = null;
+	if State.ihud:
+		State.ihud.item_clear()
