@@ -22,11 +22,10 @@ draw_center = false
 layer = 100
 script = ExtResource("1_p6bn5")
 
-[node name="Balloon" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+[node name="Balloon" type="ColorRect" parent="."]
 size_flags_horizontal = 0
 theme = ExtResource("2_evsa1")
+color = Color(0, 0, 0, 1)
 
 [node name="Margin" type="MarginContainer" parent="Balloon"]
 custom_minimum_size = Vector2(0, 200)
