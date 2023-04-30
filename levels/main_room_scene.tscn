@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhmfvrcbx4eei"]
+[gd_scene load_steps=9 format=3 uid="uid://bhmfvrcbx4eei"]
 
 [ext_resource type="Script" path="res://levels/main_room_scene.gd" id="1_r42hg"]
 [ext_resource type="Texture2D" uid="uid://c378xu5axwoot" path="res://altTest/Scene.png" id="1_tr38i"]
 [ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="2_w5cku"]
 [ext_resource type="Texture2D" uid="uid://be4u1cop34w6h" path="res://sprites/Room_MainRoom.png" id="4_db32k"]
-[ext_resource type="PackedScene" uid="uid://dpi88ttcv1b5j" path="res://characters/player/player.tscn" id="4_yspwa"]
 [ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="5_gtyru"]
 [ext_resource type="PackedScene" uid="uid://dd8awmlfdgv0q" path="res://ui/interactiveHud.tscn" id="7_b37jh"]
 
@@ -22,7 +21,6 @@ script = ExtResource("1_r42hg")
 position = Vector2(575, 326)
 scale = Vector2(0.848958, 0.848958)
 texture = ExtResource("1_tr38i")
-metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 25.0
@@ -36,9 +34,6 @@ material = SubResource("ShaderMaterial_nkff4")
 position = Vector2(777, 228.75)
 scale = Vector2(0.660807, 0.660807)
 texture = ExtResource("4_db32k")
-
-[node name="Player" parent="." instance=ExtResource("4_yspwa")]
-position = Vector2(404, 295)
 
 [node name="DoorToTheHallway" parent="." instance=ExtResource("5_gtyru")]
 position = Vector2(220, 271)
@@ -60,6 +55,9 @@ position = Vector2(920, 269)
 USE_MESSAGE = "Go to the balcony?"
 
 [node name="interactiveHud" parent="." instance=ExtResource("7_b37jh")]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(467, 295)
 
 [connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
 [connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]
