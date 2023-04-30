@@ -28,11 +28,15 @@ func _process(delta: float) -> void:
 		
 	var is_item_used = Input.is_action_just_pressed("use");
 	if is_item_used && hovered_item :
-		hovered_item.emit_signal('object_used');
+		if !hovered_item.item_on_cooldown:
+			hovered_item.emit_signal('object_used');
 
 
 func _physics_process(_delta: float) -> void:
-
+	
+	if State.player_is_busy:
+		return
+	
 	var direction := Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")

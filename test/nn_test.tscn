@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cimfy6pk0vvv5"]
+[gd_scene load_steps=8 format=3 uid="uid://cimfy6pk0vvv5"]
 
 [ext_resource type="Script" path="res://test/nn_test.gd" id="1_4qk40"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="4_476ux"]
 [ext_resource type="SpriteFrames" uid="uid://biyqy211ky6fd" path="res://test/walker_sframes.tres" id="98_ect28"]
 [ext_resource type="PackedScene" uid="uid://dpi88ttcv1b5j" path="res://characters/player/player.tscn" id="99_8q4ce"]
 
@@ -63,7 +64,12 @@ shape = SubResource("RectangleShape2D_u1mqa")
 position = Vector2(453.087, 315.511)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(147.913, -1.51117)
+position = Vector2(305.913, -428.511)
 shape = SubResource("CircleShape2D_g1f3y")
 
+[node name="UsableObject" parent="." instance=ExtResource("4_476ux")]
+position = Vector2(101, 297)
+scale = Vector2(5.40876, 4.60921)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="object_used" from="UsableObject" to="." method="_on_usable_object_object_used"]
