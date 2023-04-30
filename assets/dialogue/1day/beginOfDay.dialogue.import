@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bhmst3lgut8rf"
+path="res://.godot/imported/beginOfDay.dialogue-4813120ebb197421354c7058fd17a529.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/1day/beginOfDay.dialogue"
+dest_files=["res://.godot/imported/beginOfDay.dialogue-4813120ebb197421354c7058fd17a529.tres"]
+
+[params]
+

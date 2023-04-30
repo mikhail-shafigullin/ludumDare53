@@ -13,4 +13,11 @@ var player: Node2D;
 var location: LocationState;
 var sceneManager: Node2D;
 var ihud: CanvasLayer;
-var day: int = 0;
+var day: int = 1;
+var soundBoard: Node2D;
+
+var dayScripts = {
+	"firstDay": {
+		"beginOfDay": false,
+	},
+};

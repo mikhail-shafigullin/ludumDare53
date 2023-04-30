@@ -69,7 +69,6 @@ func _physics_process(_delta: float) -> void:
 	velocity = speed * direction
 	move_and_slide()
 
-
 func _on_usable_object_hovered(usable_object: Node2D):
 	print('player hover usable_object');
 	hovered_item = usable_object;

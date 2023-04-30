@@ -1,0 +1,15 @@
+~ dayOne_beginOfDay
+
+do State.sceneManager.ihud.novel_show()
+# Computer
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+"Just another ordinary day. Time to get to work."
+
+do State.soundBoard.playLeftFarSound('knockSound')
+Sound of knocking
+
+[wait = 1]
+"Who is it?"
+do State.ihud.novel_hide()
+
+=> END

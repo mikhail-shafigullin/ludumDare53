@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5rjthc60t8ie"]
+
+[ext_resource type="AudioStream" uid="uid://sc60b5iimtvl" path="res://audio/KnockSound01.wav" id="1_4ssoo"]
+[ext_resource type="Script" path="res://audio/sound_board.gd" id="1_62ff0"]
+
+[node name="SoundBoard" type="Node2D"]
+script = ExtResource("1_62ff0")
+
+[node name="LeftFarSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1572, 295)
+stream = ExtResource("1_4ssoo")
+max_distance = 4000.0
+
+[node name="LeftNearSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-687, 295)
+stream = ExtResource("1_4ssoo")
+max_distance = 4000.0
+
+[node name="RightNearSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1792, 295)
+stream = ExtResource("1_4ssoo")
+max_distance = 4000.0
+
+[node name="RightFarSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2595, 295)
+stream = ExtResource("1_4ssoo")
+max_distance = 4000.0
+
+[node name="NonPositionalSound" type="AudioStreamPlayer" parent="."]
