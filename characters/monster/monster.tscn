@@ -47,6 +47,7 @@ _data = {
 }
 
 [node name="Monster" type="CharacterBody2D"]
+z_index = 2
 
 [node name="Floor" type="CollisionShape2D" parent="."]
 position = Vector2(0, 84)

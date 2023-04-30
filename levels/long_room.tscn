@@ -14,6 +14,9 @@ script = ExtResource("1_gtcml")
 position = Vector2(726, 238)
 texture = ExtResource("1_2r8ns")
 
+[node name="Monster" parent="Room" instance=ExtResource("3_bbblg")]
+position = Vector2(-33, 36)
+
 [node name="Left" type="StaticBody2D" parent="Room"]
 position = Vector2(-768, 0)
 
@@ -29,6 +32,3 @@ shape = SubResource("RectangleShape2D_2fp6r")
 [node name="PlayerStart" type="Marker2D" parent="."]
 position = Vector2(599, 274)
 gizmo_extents = 171.5
-
-[node name="Monster" parent="." instance=ExtResource("3_bbblg")]
-position = Vector2(1084, 274)
