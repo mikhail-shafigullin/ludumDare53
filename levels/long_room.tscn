@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://indmllc0qe72"]
+
+[ext_resource type="Texture2D" uid="uid://jak178anx3lw" path="res://sprites/long.png" id="1_2r8ns"]
+[ext_resource type="Script" path="res://levels/long_room.gd" id="1_gtcml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fp6r"]
+size = Vector2(20, 334)
+
+[node name="LongRoom" type="Node2D"]
+script = ExtResource("1_gtcml")
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(726, 238)
+texture = ExtResource("1_2r8ns")
+
+[node name="Left" type="StaticBody2D" parent="Room"]
+position = Vector2(-768, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Left"]
+shape = SubResource("RectangleShape2D_2fp6r")
+
+[node name="Right" type="StaticBody2D" parent="Room"]
+position = Vector2(822, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Right"]
+shape = SubResource("RectangleShape2D_2fp6r")
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+position = Vector2(599, 274)
+gizmo_extents = 171.5

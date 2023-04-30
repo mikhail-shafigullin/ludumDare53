@@ -2,6 +2,7 @@ extends Node2D
 @onready var ihud = $interactiveHud
 
 var transitionScenePath: String;
+signal transition
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +16,7 @@ func transtionTo(sceneFilePath: String):
 	transitionScenePath = sceneFilePath;
 	State.player_is_busy = true;
 	$TransitionScreen.transition();
+	transition.emit()
 
 func _on_transition_screen_transitioned():
 	$CurrentScene.get_child(0).queue_free();

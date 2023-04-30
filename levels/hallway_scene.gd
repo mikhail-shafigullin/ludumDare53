@@ -23,6 +23,7 @@ func _on_door_to_the_main_room_object_used():
 
 
 func _on_door_to_the_entrance_object_used():
+	State.sceneManager.transtionTo("res://levels/long_room.tscn");
 	print('Go to the intrance');
 
 
