@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 func _physics_process(_delta: float) -> void:
 	
 	if State.player_is_busy:
+		velocity = Vector2(0, 0)
 		return
 	
 	var direction := Vector2(

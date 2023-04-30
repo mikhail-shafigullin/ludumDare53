@@ -57,11 +57,17 @@ USE_MESSAGE = "Go to the balcony?"
 
 [node name="interactiveHud" parent="." instance=ExtResource("7_b37jh")]
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="StartMarker" type="Marker2D" parent="."]
 position = Vector2(467, 295)
 
 [node name="TestItem" parent="." instance=ExtResource("7_1le5h")]
 position = Vector2(642, 263)
+
+[node name="Marker_fromHallway" type="Marker2D" parent="."]
+position = Vector2(220, 295)
+
+[node name="Marker_fromBalcony" type="Marker2D" parent="."]
+position = Vector2(920, 295)
 
 [connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
 [connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]

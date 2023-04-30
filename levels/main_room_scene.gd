@@ -3,8 +3,11 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	State.player.transform = $Marker2D.transform
-	State.player.move_to_front();
+	if State.location == State.LocationState.STATE_KITCHEN:
+		State.player.transform = get_node('Marker_fromHallway').transform
+	else:
+		State.player.transform = get_node('StartMarker').transform
+	
 	State.location = State.LocationState.STATE_MAIN_ROOM;
 
 
@@ -14,10 +17,9 @@ func _process(delta):
 
 
 func _on_door_to_the_hallway_object_used():
-	get_tree().change_scene_to_file("res://levels/hallway_scene.tscn")
+	State.sceneManager.transtionTo("res://levels/hallway_scene.tscn");
 	print('Go to the hallway');
 	
-
 
 func _on_door_to_the_balcony_object_used():
 	print('Go to the balcony');

@@ -48,6 +48,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 script = ExtResource("1_13kwh")
 
 [node name="Floor" type="CollisionShape2D" parent="."]

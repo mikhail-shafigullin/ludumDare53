@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca20chk4p8d6n"]
+[gd_scene load_steps=8 format=3 uid="uid://ca20chk4p8d6n"]
 
 [ext_resource type="Script" path="res://levels/hallway_scene.gd" id="1_eqg4k"]
 [ext_resource type="PackedScene" uid="uid://dd8awmlfdgv0q" path="res://ui/interactiveHud.tscn" id="1_sx7uj"]
 [ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="2_bbrgs"]
 [ext_resource type="Texture2D" uid="uid://qdf3wncgmhvj" path="res://sprites/Room_Hallway.png" id="3_ikxuc"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="5_r5fuf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_okysy"]
 shader = ExtResource("2_bbrgs")
@@ -40,6 +41,27 @@ shape = SubResource("RectangleShape2D_xi6uf")
 position = Vector2(829, 186)
 shape = SubResource("RectangleShape2D_xi6uf")
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(498, 274)
+[node name="Marker_fromMainRoom" type="Marker2D" parent="."]
+position = Vector2(498, 295)
 gizmo_extents = 17.8
+
+[node name="Marker_fromKitchen" type="Marker2D" parent="."]
+position = Vector2(776, 295)
+gizmo_extents = 17.8
+
+[node name="Marker_fromEntrance" type="Marker2D" parent="."]
+position = Vector2(213, 295)
+gizmo_extents = 17.8
+
+[node name="DoorToTheKitchen" parent="." instance=ExtResource("5_r5fuf")]
+position = Vector2(776, 295)
+
+[node name="DoorToTheEntrance" parent="." instance=ExtResource("5_r5fuf")]
+position = Vector2(213, 295)
+
+[node name="DoorToTheMainRoom" parent="." instance=ExtResource("5_r5fuf")]
+position = Vector2(498, 295)
+
+[connection signal="object_used" from="DoorToTheKitchen" to="." method="_on_door_to_the_kitchen_object_used"]
+[connection signal="object_used" from="DoorToTheEntrance" to="." method="_on_door_to_the_entrance_object_used"]
+[connection signal="object_used" from="DoorToTheMainRoom" to="." method="_on_door_to_the_main_room_object_used"]
