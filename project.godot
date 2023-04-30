@@ -17,12 +17,8 @@ config/icon="res://ico.png"
 
 [autoload]
 
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 State="*res://state.gd"
-
-[dialogue_manager]
-
-general/states=["State"]
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5rjthc60t8ie"]
+[gd_scene load_steps=3 format=3 uid="uid://dwlspwc8834ks"]
 
 [ext_resource type="AudioStream" uid="uid://sc60b5iimtvl" path="res://audio/KnockSound01.wav" id="1_4ssoo"]
 [ext_resource type="Script" path="res://audio/sound_board.gd" id="1_62ff0"]

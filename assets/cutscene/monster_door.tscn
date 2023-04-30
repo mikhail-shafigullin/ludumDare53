@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4003uvlshec"]
+
+[ext_resource type="Texture2D" uid="uid://de18fjvxs4gbq" path="res://characters/monster/fly.png" id="1_wpkqm"]
+
+[sub_resource type="Animation" id="Animation_f73pf"]
+resource_name = "peak"
+length = 30.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D/Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-37.1752, -0.25, 0, 0.25, 0, 14.55, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygon2D/Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-3.8576, -0.25, 0, 0.25, 0, 6.93603, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Polygon2D/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.219911, -0.25, 0, 0.25, 0, 0.165601, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.1, 7.7)
+}
+
+[sub_resource type="Animation" id="Animation_dxs8w"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D/Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-37.1752, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygon2D/Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-3.8576, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Polygon2D/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.165601, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0j5r"]
+_data = {
+"RESET": SubResource("Animation_dxs8w"),
+"peak": SubResource("Animation_f73pf")
+}
+
+[node name="MonsterDoor" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+clip_children = 1
+polygon = PackedVector2Array(1, -167, -1, 161, 204, 213, 203, -172)
+
+[node name="Sprite2D" type="Sprite2D" parent="Polygon2D"]
+texture_filter = 1
+position = Vector2(-37.1752, -3.8576)
+rotation = 0.165601
+scale = Vector2(2, 2)
+texture = ExtResource("1_wpkqm")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "peak"
+libraries = {
+"": SubResource("AnimationLibrary_u0j5r")
+}

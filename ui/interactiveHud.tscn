@@ -47,7 +47,6 @@ offset_right = 1009.0
 offset_bottom = 142.0
 scale = Vector2(1.00294, 1.00804)
 theme = ExtResource("1_okety")
-text = "teststst"
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(170, 0)
