@@ -1,21 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://xoqqkwegsyoo"]
+[gd_scene load_steps=5 format=3 uid="uid://xoqqkwegsyoo"]
 
 [ext_resource type="Script" path="res://levels/SceneManager.gd" id="1_dnu1y"]
 [ext_resource type="PackedScene" uid="uid://bhmfvrcbx4eei" path="res://levels/main_room_scene.tscn" id="2_n40qn"]
 [ext_resource type="PackedScene" uid="uid://dqs6vdvxa4y4w" path="res://ui/TransitionScreen.tscn" id="3_07cap"]
+[ext_resource type="PackedScene" uid="uid://dd8awmlfdgv0q" path="res://ui/interactiveHud.tscn" id="3_fcwdx"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_dnu1y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="CurrentScene" type="Node2D" parent="."]
 
 [node name="main_room_scene" parent="CurrentScene" instance=ExtResource("2_n40qn")]
 scale = Vector2(0.988479, 1)
 
-[node name="TransitionScreen" parent="." instance=ExtResource("3_07cap")]
+[node name="interactiveHud" parent="." instance=ExtResource("3_fcwdx")]
 
-[node name="ColorRect" parent="TransitionScreen" index="0"]
-anchors_preset = 15
+[node name="TransitionScreen" parent="." instance=ExtResource("3_07cap")]
 
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_transition_screen_transitioned"]
 
