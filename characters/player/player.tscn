@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpi88ttcv1b5j"]
+[gd_scene load_steps=11 format=3 uid="uid://dpi88ttcv1b5j"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_13kwh"]
 [ext_resource type="SpriteFrames" uid="uid://bprqcesajri21" path="res://characters/player/player_sprite_frames.tres" id="2_tvwvv"]
@@ -79,6 +79,9 @@ _data = {
 "walk_1": SubResource("Animation_rcqdo")
 }
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pqond"]
+polygon = PackedVector2Array(-4, -89, 0, -90, 3, -89, 6, -85, 7, -81, 5, -74, 3, -64, 6, -60, 8, -55, 8, -50, 10, -1, 9, 19, 9, 83, -5, 83, -5, 19, -8, -1, -8, -50, -8, -55, -6, -60, -4, -64, -5, -74, -8, -81, -7, -85)
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 script = ExtResource("1_13kwh")
@@ -97,9 +100,8 @@ shape = SubResource("CapsuleShape2D_ajbhg")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_tvwvv")
-animation = &"idle_300_f"
+animation = &"idld_300_b"
 autoplay = "idle_90"
-frame_progress = 0.931822
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Body")
@@ -107,6 +109,9 @@ autoplay = "idle_300f"
 libraries = {
 "": SubResource("AnimationLibrary_5oqrd")
 }
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_pqond")
 
 [connection signal="usable_object_hovered" from="." to="." method="_on_usable_object_hovered"]
 [connection signal="usable_object_unhovered" from="." to="." method="_on_usable_object_unhovered"]

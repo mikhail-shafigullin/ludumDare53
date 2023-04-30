@@ -9,6 +9,9 @@
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_dnu1y")
 
+[node name="Night" type="CanvasModulate" parent="."]
+color = Color(0.243137, 0.243137, 0.270588, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
