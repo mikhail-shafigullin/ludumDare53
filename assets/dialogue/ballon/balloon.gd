@@ -1,11 +1,11 @@
 extends CanvasLayer
 
 
-@onready var balloon: ColorRect = $Balloon
+@onready var balloon: Control = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
-@onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
-@onready var dialogue_label := $Balloon/Margin/VBox/DialogueLabel
-@onready var responses_menu: VBoxContainer = $Balloon/Margin/VBox/Responses
+@onready var character_label: RichTextLabel = $Balloon/Margin/HBoxContainer/VBox/CharacterLabel
+@onready var dialogue_label := $Balloon/Margin/HBoxContainer/VBox/DialogueLabel
+@onready var responses_menu: VBoxContainer = $Balloon/Margin/HBoxContainer/VBox/Responses
 @onready var response_template: RichTextLabel = %ResponseTemplate
 
 ## The dialogue resource
@@ -160,7 +160,7 @@ func handle_resize() -> void:
 		call_deferred("handle_resize")
 		return
 		
-	balloon.custom_minimum_size.y = margin.size.y
+	balloon.custom_minimum_size.y = 240
 	# Force a resize on only the height
 	balloon.size.y = 0
 	var viewport_size = balloon.get_viewport_rect().size

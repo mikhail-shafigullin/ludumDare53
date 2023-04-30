@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://krfmiyieguvn"]
+
+[ext_resource type="FontFile" uid="uid://55qf55hy1h6o" path="res://fonts/Ysabeau-Medium.ttf" id="1_6dvpe"]
+
+[resource]
+default_font = ExtResource("1_6dvpe")
+default_font_size = 32
+RichTextLabel/constants/line_separation = 0
