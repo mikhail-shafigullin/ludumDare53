@@ -8,6 +8,7 @@ signal usable_object_unhovered(usable_object);
 
 var is_walking_left := true
 var is_running := false
+var idel_name := "idle_90"
 var hovered_item: Node2D;
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +21,7 @@ func _process(delta: float) -> void:
 	body.flip_h = !is_walking_left;
 	
 	if abs(velocity.x) < 1:
-		animation_player.play("idle_90")
+		animation_player.play(idel_name)
 		body.speed_scale = 1
 	else:
 		animation_player.play("walk_1")
@@ -44,7 +45,15 @@ func _physics_process(_delta: float) -> void:
 	)
 	
 	is_running = Input.get_action_strength("run")
-
+	
+	if direction.x == 0:
+		if direction.y != 0:
+			if direction.y > 0:
+				idel_name = "idle_300f"
+			else:
+				idel_name = "idle_300b"
+	else:
+		idel_name = "idle_90"
 	
 	direction *= Vector2(1, 0)
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpi88ttcv1b5j"]
+[gd_scene load_steps=10 format=3 uid="uid://dpi88ttcv1b5j"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_13kwh"]
 [ext_resource type="SpriteFrames" uid="uid://bprqcesajri21" path="res://characters/player/player_sprite_frames.tres" id="2_tvwvv"]
@@ -41,8 +41,40 @@ tracks/0/keys = {
 "values": [&"walk_1"]
 }
 
+[sub_resource type="Animation" id="Animation_e612k"]
+resource_name = "idle_300f"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle_300_f"]
+}
+
+[sub_resource type="Animation" id="Animation_6t5wu"]
+resource_name = "idle_300b"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idld_300_b"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5oqrd"]
 _data = {
+"idle_300b": SubResource("Animation_6t5wu"),
+"idle_300f": SubResource("Animation_e612k"),
 "idle_90": SubResource("Animation_ouvqc"),
 "walk_1": SubResource("Animation_rcqdo")
 }
@@ -65,12 +97,13 @@ shape = SubResource("CapsuleShape2D_ajbhg")
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_tvwvv")
-animation = &"idle_90"
+animation = &"idle_300_f"
 autoplay = "idle_90"
+frame_progress = 0.931822
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Body")
-autoplay = "idle_90"
+autoplay = "idle_300f"
 libraries = {
 "": SubResource("AnimationLibrary_5oqrd")
 }
