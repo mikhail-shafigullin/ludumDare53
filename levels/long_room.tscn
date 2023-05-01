@@ -19,6 +19,7 @@ texture = ExtResource("1_2r8ns")
 position = Vector2(275, 27)
 facing_left = true
 walk = true
+speed = 45
 
 [node name="Left" type="StaticBody2D" parent="Room"]
 position = Vector2(-768, 0)

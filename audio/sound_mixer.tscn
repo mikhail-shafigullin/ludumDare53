@@ -23,16 +23,19 @@ icon = ExtResource("1_50arl")
 icon_alignment = 1
 expand_icon = true
 
-[node name="SoundSlider" type="HSlider" parent="."]
+[node name="SoundSlider" type="VSlider" parent="."]
 visible = false
-layout_mode = 0
-offset_left = 34.0
-offset_top = 3.0
-offset_right = 133.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 17.5
+offset_right = 32.0
+offset_bottom = 186.5
+grow_vertical = 2
 focus_mode = 0
-min_value = -24.0
-max_value = 12.0
+min_value = -96.0
+max_value = 16.0
 step = 0.5
 
 [connection signal="pressed" from="SoundButton" to="." method="_on_sound_button_pressed"]

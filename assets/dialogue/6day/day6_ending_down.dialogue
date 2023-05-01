@@ -3,9 +3,12 @@ import "res://assets/dialogue/credits.dialogue" as a_credits
 ~ ending_down
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down1.png")
 
 going down
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down2.png")
+top-top
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true

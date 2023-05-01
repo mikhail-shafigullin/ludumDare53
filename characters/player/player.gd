@@ -89,5 +89,7 @@ func _on_usable_object_unhovered(usable_object):
 		State.ihud.item_clear()
 
 func death():
+	if State.player_is_busy:
+		return;
 	State.sceneManager.play_dialogue("res://assets/dialogue/death.dialogue")
 	print("player is ded :(")
