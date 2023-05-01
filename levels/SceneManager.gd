@@ -110,3 +110,5 @@ func _on_bosy_timer_timeout():
 	var ballon = $CurrentScene.get_child_count() > 1
 	if ballon:
 		State.player_is_busy = true
+	else:
+		State.player_is_busy = false
