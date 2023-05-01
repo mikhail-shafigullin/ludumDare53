@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://indmllc0qe72"]
+[gd_scene load_steps=6 format=3 uid="uid://indmllc0qe72"]
 
 [ext_resource type="Texture2D" uid="uid://jak178anx3lw" path="res://sprites/long.png" id="1_2r8ns"]
 [ext_resource type="Script" path="res://levels/long_room.gd" id="1_gtcml"]
 [ext_resource type="PackedScene" uid="uid://bx67m7t00qsaw" path="res://characters/monster/monster.tscn" id="3_bbblg"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="4_kk0it"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fp6r"]
 size = Vector2(20, 334)
@@ -34,3 +35,10 @@ shape = SubResource("RectangleShape2D_2fp6r")
 [node name="PlayerStart" type="Marker2D" parent="."]
 position = Vector2(599, 274)
 gizmo_extents = 171.5
+
+[node name="DoorToTheHallway" parent="." instance=ExtResource("4_kk0it")]
+position = Vector2(597, 224)
+USE_MESSAGE = "Go to the hallway?"
+
+[connection signal="child_entered_tree" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_child_entered_tree"]
+[connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]

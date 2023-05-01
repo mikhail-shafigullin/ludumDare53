@@ -22,3 +22,10 @@ func _process(delta):
 		State.player.global_position.x -= offset
 
 
+
+
+func _on_door_to_the_hallway_object_used():
+	if State.day == 6:
+		return
+	State.sceneManager.transtionTo("res://levels/hallway_scene.tscn");
+	print('Go to the hallway');
