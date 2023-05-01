@@ -1,6 +1,7 @@
 extends Node2D
 @onready var ihud = $interactiveHud
 @onready var night = $Night
+@onready var debug_menu = $debugMenu
 
 
 var transitionScenePath: String;
@@ -80,3 +81,18 @@ func _on_dialog_end() -> void:
 	State.sceneManager.ihud.novel_hide()
 	has_balloon = false
 	State.player_is_busy = false
+
+func restart_day() -> void:
+	match State.day:
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+		5:
+			pass
+		6:
+			debug_menu.teleportTo6Day()
