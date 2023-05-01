@@ -26,6 +26,7 @@ var dayScripts := {
 	},
 	"lastDay": {
 		"beginOfDay": false,
+		"secondPhase": false,
 		"letterTaken": false,
 	},
 };
@@ -38,6 +39,7 @@ var dayScripts_DEFAULT := {
 	},
 	"lastDay": {
 		"beginOfDay": false,
+		"secondPhase": false,
 		"letterTaken": false,
 	},
 };

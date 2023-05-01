@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if State.transitionEventKey == 'fromPeepholeDayOne':
+	if State.transitionEventKey == 'fromPeepholeDayOne' && State.day == 1:
 		State.player.transform = $Marker_trashCan.transform;
 		State.player_is_busy = false;
 		State.sceneManager.play_dialogue("res://assets/dialogue/1day/trashCan_1day.dialogue");
@@ -25,7 +25,8 @@ func _process(delta):
 
 
 func _on_trash_can_object_used():
-	pass # Replace with function body.
+	if State.day == 6 && !State.dayScripts.lastDay.letterTaken:
+		State.sceneManager.play_dialogue("res://assets/dialogue/6day/pickUpTrash.dialogue")
 
 func _on_door_to_the_balcony_object_used():
 	State.sceneManager.transtionTo("res://levels/balcony_scene.tscn");

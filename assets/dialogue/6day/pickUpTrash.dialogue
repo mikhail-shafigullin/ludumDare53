@@ -1,0 +1,12 @@
+~ this_is_a_node_title
+
+do State.sceneManager.ihud.novel_show()
+This letter is still here
+
+Take it?
+- Yes
+	do State.dayScripts.lastDay.letterTaken = true
+- No
+	
+[next=auto]
+=> END

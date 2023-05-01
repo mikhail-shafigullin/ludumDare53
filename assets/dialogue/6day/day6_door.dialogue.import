@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dcjqgqllvbhnd"
+path="res://.godot/imported/day6_door.dialogue-7a915024666d75f70244007a85b20242.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/6day/day6_door.dialogue"
+dest_files=["res://.godot/imported/day6_door.dialogue-7a915024666d75f70244007a85b20242.tres"]
+
+[params]
+
