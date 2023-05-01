@@ -1,11 +1,13 @@
 ~ day_6_begining
 
-do State.sceneManager.set_day(false)
+do State.sceneManager.set_day(true)
+do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://ico.png")
 # Computer
 work is almost done
 
+do State.player_is_busy = true
 do State.soundBoard.playLeftFarSound('knockSound')
 *door knoking* [wait=0.3]
 I dont have time for it[next=auto]
@@ -14,6 +16,7 @@ do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
 is my door locked?
 
+do State.sceneManager.set_day(false)
 *light goes off*
 
 I need to check it

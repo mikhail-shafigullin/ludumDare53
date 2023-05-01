@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4003uvlshec"]
 
 [ext_resource type="Script" path="res://assets/cutscene/monster_door.gd" id="1_gf260"]
-[ext_resource type="Texture2D" uid="uid://de18fjvxs4gbq" path="res://characters/monster/fly.png" id="1_wpkqm"]
+[ext_resource type="SpriteFrames" uid="uid://bbw42i6mou77g" path="res://characters/monster/monster_sframes.tres" id="2_uqv61"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jc6c"]
 size = Vector2(72, 215)
@@ -11,7 +11,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D/Sprite2D:position:x")
+tracks/0/path = NodePath("Polygon2D/Area2D/Sprite2D:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Polygon2D/Sprite2D:position:y")
+tracks/1/path = NodePath("Polygon2D/Area2D/Sprite2D:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -33,13 +33,25 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Polygon2D/Sprite2D:rotation")
+tracks/2/path = NodePath("Polygon2D/Area2D/Sprite2D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0.165601, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Polygon2D/Area2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1082, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_f73pf"]
@@ -48,35 +60,71 @@ length = 30.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Polygon2D/Sprite2D:position:x")
+tracks/0/path = NodePath("Polygon2D/Area2D/Sprite2D:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-37.1752, -0.25, 0, 0.25, 0, 14.55, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 7.7)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-37.1752, -0.25, 0, 0.25, 0, 14.55, -0.25, 0, 0.25, 0, 26.1221, -0.25, 0, 0.25, 0, 10.181, -0.25, 0, 0.25, 0, 15.7601, -0.25, 0, 0.25, 0, 7.02264, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.7, 10.9, 14.8, 19.2, 28.1)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Polygon2D/Sprite2D:position:y")
+tracks/1/path = NodePath("Polygon2D/Area2D/Sprite2D:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-3.8576, -0.25, 0, 0.25, 0, 6.93603, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 7.7)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-3.8576, -0.25, 0, 0.25, 0, 6.93603, -0.25, 0, 0.25, 0, 24, -0.25, 0, 0.25, 0, 23, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, 28, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.7, 10.9, 14.8, 19.2, 28.1)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Polygon2D/Sprite2D:rotation")
+tracks/2/path = NodePath("Polygon2D/Area2D/Sprite2D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.219911, -0.25, 0, 0.25, 0, 0.165601, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 3.1, 7.7)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Polygon2D/Area2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(7.9, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1082, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Polygon2D/Area2D/Sprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(-0.1, 7, 7.8),
+"transitions": PackedFloat32Array(1, 1, 0),
+"update": 1,
+"values": [&"default", &"default", &"walk"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Polygon2D/Area2D/Sprite2D:sprite_frames")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_uqv61")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u0j5r"]
@@ -90,17 +138,20 @@ script = ExtResource("1_gf260")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 clip_children = 1
-polygon = PackedVector2Array(1, -167, -1, 161, 204, 213, 203, -172)
+polygon = PackedVector2Array(1, -167, -1, 161, 1115, 238, 1031, -217)
 
-[node name="Sprite2D" type="Sprite2D" parent="Polygon2D"]
+[node name="Area2D" type="Area2D" parent="Polygon2D"]
+position = Vector2(1082, 0)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Polygon2D/Area2D"]
 texture_filter = 1
 position = Vector2(-37.1752, -3.8576)
 rotation = 0.165601
 scale = Vector2(2, 2)
-texture = ExtResource("1_wpkqm")
+sprite_frames = ExtResource("2_uqv61")
+autoplay = "default"
+frame_progress = 0.409091
 flip_h = true
-
-[node name="Area2D" type="Area2D" parent="Polygon2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Polygon2D/Area2D"]
 position = Vector2(26, 17.5)

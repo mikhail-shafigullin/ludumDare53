@@ -1,11 +1,11 @@
 import "res://assets/dialogue/credits.dialogue" as a_credits
 
-~ ending_up
+~ ending_down
 
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://ico.png")
 
-going up
+going down
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
@@ -13,10 +13,3 @@ do State.player_is_busy = true
 =>< a_credits/credits
 
 => END
-
-
-
-
-
-
-

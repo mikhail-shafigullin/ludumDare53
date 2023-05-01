@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bpupx1ll4v3l1"
+path="res://.godot/imported/why.dialogue-4c3c6216608177a6c7925af0bcb86eeb.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/why.dialogue"
+dest_files=["res://.godot/imported/why.dialogue-4c3c6216608177a6c7925af0bcb86eeb.tres"]
+
+[params]
+

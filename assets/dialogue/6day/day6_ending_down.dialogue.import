@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://divupecanv31e"
+path="res://.godot/imported/day6_ending_down.dialogue-f811acadfe47c4193fc8ed97bc3e2564.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/6day/day6_ending_down.dialogue"
+dest_files=["res://.godot/imported/day6_ending_down.dialogue-f811acadfe47c4193fc8ed97bc3e2564.tres"]
+
+[params]
+
