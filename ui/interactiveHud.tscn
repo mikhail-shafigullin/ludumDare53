@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd8awmlfdgv0q"]
+[gd_scene load_steps=5 format=3 uid="uid://dd8awmlfdgv0q"]
 
 [ext_resource type="PackedScene" uid="uid://bjgqdqyujyrlu" path="res://assets/dialogue/novel.tscn" id="1_b35wh"]
 [ext_resource type="Theme" uid="uid://b5ggkow6gcor7" path="res://ui/interactiveHUDTheme.tres" id="1_okety"]
 [ext_resource type="Script" path="res://ui/interactiveHud.gd" id="1_t6plu"]
+[ext_resource type="PackedScene" uid="uid://b7vkwgg7gmvmf" path="res://audio/sound_mixer.tscn" id="4_e1qwm"]
 
 [node name="InteractiveHud" type="CanvasLayer"]
 script = ExtResource("1_t6plu")
@@ -65,3 +66,9 @@ offset_left = -170.0
 offset_bottom = 455.0
 grow_horizontal = 0
 color = Color(0, 0, 0, 1)
+
+[node name="SoundMixer" parent="." instance=ExtResource("4_e1qwm")]
+offset_left = 45.0
+offset_top = 10.0
+offset_right = 85.0
+offset_bottom = 50.0
