@@ -6,6 +6,11 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	State.player.global_transform = $PlayerStart.global_transform
+	
+	if State.day == 2 && State.transitionEventKey == 'meetingWithWomen':
+		State.sceneManager.play_dialogue("res://assets/dialogue/2day/meetingWithWoman_day2.dialogue");
+		State.transitionEventKey = ''
+		State.dayScripts.secondDay.meetWithWoman = true;
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

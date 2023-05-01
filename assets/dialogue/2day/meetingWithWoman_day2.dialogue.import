@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://l1tqumbm55m8"
+path="res://.godot/imported/meetingWithWoman_day2.dialogue-f8635f8933a621347925e54897c83ed9.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/2day/meetingWithWoman_day2.dialogue"
+dest_files=["res://.godot/imported/meetingWithWoman_day2.dialogue-f8635f8933a621347925e54897c83ed9.tres"]
+
+[params]
+

@@ -1,0 +1,18 @@
+~ this_is_a_node_title
+
+do State.sceneManager.ihud.novel_show()
+# Peephole with some movement
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+
+"Что? Что это?"
+
+# Peephole without movement
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+
+"Кто там?"
+
+do State.soundBoard.playLeftNearSound('openDoor')
+
+do State.sceneManager.transtionToWithEvent("res://levels/long_room_scene.tscn", "meetingWithWomen")
+
+=> END

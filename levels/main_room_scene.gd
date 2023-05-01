@@ -10,6 +10,9 @@ func _ready():
 	else:
 		State.player.transform = get_node('StartMarker').transform
 	
+	if State.day == 1 && State.transitionEventKey == '2dayStart' :
+		startSecondDay();
+	
 	State.location = State.LocationState.STATE_MAIN_ROOM;
 	
 
@@ -17,6 +20,19 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func on_bed_day1():
+	if State.dayScripts.firstDay.wentToKitchen && !State.dayScripts.firstDay.goToSleep:
+		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
+	else :
+		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
+
+func startSecondDay():
+	print('Second day start')
+	State.player_is_busy = true
+	State.day = 2
+	State.dayScripts.secondDay.beginOfDay = true;
+	State.sceneManager.play_dialogue("res://assets/dialogue/2day/beginOfDay_day2.dialogue");
 
 func _on_door_to_the_hallway_object_used():
 	State.sceneManager.transtionTo("res://levels/hallway_scene.tscn");
@@ -36,10 +52,4 @@ func _on_bed_object_used():
 			State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue");
 	
 	pass # Replace with function body.
-
-func on_bed_day1():
-	if State.dayScripts.firstDay.wentToKitchen && !State.dayScripts.firstDay.goToSleep:
-		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
-	else :
-		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
 

@@ -1,0 +1,22 @@
+~ meetingWithWoman_day2
+
+do State.sceneManager.ihud.novel_show()
+# Conversation with woman
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+
+...
+Вверх по лестнице поднимается девушка.
+
+Не думаю, что это она так веселится.
+
+Девушка: "Что-то случилось?"
+
+"Кто-то стучался ко мне в дверь. Не видели никого здесь?"
+
+Лицо девушки выразило недоумение
+
+Девушка: "Нет, никого не было."
+
+Девушка: "Я бы увидела кого-нибудь, если бы кто-то выходил от вас."
+
+=> END

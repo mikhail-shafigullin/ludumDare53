@@ -25,6 +25,11 @@ var dayScripts := {
 		"wentToKitchen": false,
 		"goToSleep": false,
 	},
+	"secondDay": {
+		"beginOfDay": false,
+		"peephole": false,
+		"meetWithWoman": false,
+	},
 	"lastDay": {
 		"beginOfDay": false,
 		"letterTaken": false,
@@ -37,6 +42,11 @@ var dayScripts_DEFAULT := {
 		"peephole": false,
 		"wentToKitchen": false,
 		"goToSleep": false,
+	},
+	"secondDay": {
+		"beginOfDay": false,
+		"peephole": false,
+		"meetWithWoman": false,
 	},
 	"lastDay": {
 		"beginOfDay": false,

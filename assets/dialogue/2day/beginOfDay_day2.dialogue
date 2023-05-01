@@ -1,0 +1,16 @@
+~ beginOfDay_day2
+
+do State.sceneManager.set_day(true)
+do State.sceneManager.ihud.novel_show()
+# Computer
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+"Вроде потихоньку заканчиваю. Но возможно еще один день понадобится"
+
+do State.soundBoard.playLeftFarSound('knockSound')
+Knock knock
+
+[wait = 1]
+"Кто на этот раз?"
+do State.ihud.novel_hide()
+
+=> END
