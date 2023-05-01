@@ -89,4 +89,7 @@ func _on_usable_object_unhovered(usable_object):
 		State.ihud.item_clear()
 
 func death():
+	State.player.global_position = Vector2(9001,9001)
+	State.sceneManager.play_dialogue("res://assets/dialogue/death.dialogue")
+			
 	print("player is ded :(")

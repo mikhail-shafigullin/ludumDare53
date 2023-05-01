@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+
+do State.sceneManager.ihud.novel_show()
+You are dead
+
+restart?
+- day
+	do State.sceneManager.restart_day()
+- from begining
+	do State.sceneManager.debug_menu.teleportTo1Day()
+
+
+=> END
