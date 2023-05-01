@@ -1,5 +1,7 @@
 extends Node2D
 @onready var ihud = $interactiveHud
+@onready var night = $Night
+
 
 var transitionScenePath: String;
 signal transition
@@ -20,6 +22,9 @@ func new_day():
 	
 	if State.day == 6:
 		start_last_day()
+
+func set_day(day_state: bool):
+	night.visible = !day_state
 
 func transtionTo(sceneFilePath: String):
 	transitionScenePath = sceneFilePath;

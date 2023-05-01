@@ -1,5 +1,6 @@
 ~ dayOne_beginOfDay
 
+do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_show()
 # Computer
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")

@@ -1,6 +1,6 @@
 ~ peephole_1day
 
-do State.player_is_busy = true
+
 Кто это может быть? Я никого не жду.
 
 do State.sceneManager.ihud.novel_show()
