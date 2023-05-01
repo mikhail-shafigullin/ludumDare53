@@ -32,13 +32,22 @@ position = Vector2(822, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room/Right"]
 shape = SubResource("RectangleShape2D_2fp6r")
 
+[node name="DoorToTheHallway" parent="Room" instance=ExtResource("4_kk0it")]
+position = Vector2(-129, -14)
+USE_MESSAGE = "Go to the hallway?"
+
+[node name="StaircaseUp" parent="Room" instance=ExtResource("4_kk0it")]
+position = Vector2(-377, -20)
+USE_MESSAGE = "Staircase up"
+
+[node name="StaircaseDown" parent="Room" instance=ExtResource("4_kk0it")]
+position = Vector2(-494, -20)
+USE_MESSAGE = "Staircase down"
+
 [node name="PlayerStart" type="Marker2D" parent="."]
 position = Vector2(599, 274)
 gizmo_extents = 171.5
 
-[node name="DoorToTheHallway" parent="." instance=ExtResource("4_kk0it")]
-position = Vector2(597, 224)
-USE_MESSAGE = "Go to the hallway?"
-
-[connection signal="child_entered_tree" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_child_entered_tree"]
-[connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
+[connection signal="object_used" from="Room/DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
+[connection signal="object_used" from="Room/StaircaseUp" to="." method="_on_staircase_up_object_used"]
+[connection signal="object_used" from="Room/StaircaseDown" to="." method="_on_staircase_down_object_used"]

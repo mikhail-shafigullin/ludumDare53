@@ -29,3 +29,16 @@ func _on_door_to_the_hallway_object_used():
 		return
 	State.sceneManager.transtionTo("res://levels/hallway_scene.tscn");
 	print('Go to the hallway');
+
+
+func _on_staircase_up_object_used():
+	if State.day == 6:
+		print("ending 1")
+	else:
+		print("why?")
+
+func _on_staircase_down_object_used():
+	if State.day == 6:
+		print("ending 2")
+	else:
+		print("why?")
