@@ -3,6 +3,7 @@
 do State.player_is_busy = true
 Интересно, что в этом письме.
 
+do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 # Peephole_with_man
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")

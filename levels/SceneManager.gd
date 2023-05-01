@@ -5,6 +5,7 @@ var transitionScenePath: String;
 signal transition
 
 const Balloon = preload("res://assets/dialogue/ballon/balloon.tscn")
+var has_balloon := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,7 +40,8 @@ func _on_transition_screen_transitioned():
 	$CurrentScene.get_child(0).queue_free();
 	var scene = load(transitionScenePath).instantiate();
 	$CurrentScene.add_child(scene);
-	State.player_is_busy = false;
+	if !has_balloon:
+		State.player_is_busy = false;
 
 func play_dialogue(path_to_dialogue: String):
 
@@ -47,6 +49,7 @@ func play_dialogue(path_to_dialogue: String):
 	
 	var balloon: Node = Balloon.instantiate()
 	$CurrentScene.add_child(balloon)
+	has_balloon = true
 	var dialogue = load(path_to_dialogue)
 	balloon.start(dialogue, "start")
 	balloon.tree_exiting.connect(_on_dialog_end)
@@ -70,4 +73,5 @@ func playDialogueComputer_DayLast():
 
 func _on_dialog_end() -> void:
 	State.sceneManager.ihud.novel_hide()
+	has_balloon = false
 	State.player_is_busy = false
