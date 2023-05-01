@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dy6fo1wyokue6"
+path="res://.godot/imported/day5_door.dialogue-07e8fb394b964d6c1cad9c8b430103ea.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/5day/day5_door.dialogue"
+dest_files=["res://.godot/imported/day5_door.dialogue-07e8fb394b964d6c1cad9c8b430103ea.tres"]
+
+[params]
+

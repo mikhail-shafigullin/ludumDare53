@@ -26,4 +26,7 @@ do State.soundBoard.stopRightNearSound()
 do State.soundBoard.stopNonPositionalSound()
 
 
+# temp game cut
+do State.day = 5
+do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
 => END

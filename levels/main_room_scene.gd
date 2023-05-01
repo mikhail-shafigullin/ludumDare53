@@ -13,6 +13,11 @@ func _ready():
 	if State.day == 1 && State.transitionEventKey == '2dayStart' :
 		startSecondDay();
 	
+	if State.day == 5 && !State.dayScripts.fifthDay.beginOfDay:
+		startFifthDay();
+	
+	
+	
 	State.location = State.LocationState.STATE_MAIN_ROOM;
 	
 
@@ -33,12 +38,27 @@ func on_bed_day2():
 	else :
 		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
 
+func on_bed_day5():
+	if !State.dayScripts.fifthDay.beginOfDay:
+		State.dayScripts.fifthDay.beginOfDay = true
+		State.sceneManager.play_dialogue("res://assets/dialogue/5day/5day_begin_day.dialogue");
+	elif State.dayScripts.fifthDay.peephole:
+		State.sceneManager.play_dialogue("res://assets/dialogue/5day/5day_end_day.dialogue")
+	else:
+		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
+
 func startSecondDay():
 	print('Second day start')
 	State.player_is_busy = true
 	State.day = 2
 	State.dayScripts.secondDay.beginOfDay = true;
 	State.sceneManager.play_dialogue("res://assets/dialogue/2day/beginOfDay_day2.dialogue");
+	
+func startFifthDay():
+	print('Fifth day start')
+	State.player_is_busy = true
+	State.dayScripts.fifthDay.beginOfDay = true;
+	State.sceneManager.play_dialogue("res://assets/dialogue/5day/5day_begin_day.dialogue");
 
 func _on_door_to_the_hallway_object_used():
 	State.sceneManager.transtionTo("res://levels/hallway_scene.tscn");
@@ -56,6 +76,8 @@ func _on_bed_object_used():
 			on_bed_day1();
 		2:
 			on_bed_day2();
+		5:
+			on_bed_day5();
 		_:
 			State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue");
 	

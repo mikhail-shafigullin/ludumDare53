@@ -33,6 +33,11 @@ var dayScripts := {
 		"meetWithWoman": false,
 		"goToSleep": false,
 	},
+	"fifthDay": {
+		"beginOfDay": false,
+		"peephole": false,
+		"goToSleep": false,
+	},
 	"lastDay": {
 		"beginOfDay": false,
 		"secondPhase": false,
@@ -51,6 +56,11 @@ var dayScripts_DEFAULT := {
 		"beginOfDay": false,
 		"peephole": false,
 		"meetWithWoman": false,
+		"goToSleep": false,
+	},
+	"fifthDay": {
+		"beginOfDay": false,
+		"peephole": false,
 		"goToSleep": false,
 	},
 	"lastDay": {

@@ -45,6 +45,8 @@ func peepholeCheck():
 			events_dayOne()
 		2: 
 			events_daySecond()
+		5:
+			events_dayFifth()
 		6: 
 			events_daySix()
 		_: 
@@ -72,6 +74,14 @@ func events_daySix():
 		State.dayScripts.lastDay.secondPhase = true;
 		State.player.global_position = Vector2.ZERO
 		State.sceneManager.play_dialogue("res://assets/dialogue/6day/day6_door.dialogue")
+	else :
+		State.sceneManager.transtionTo("res://levels/long_room.tscn");
+		
+func events_dayFifth():
+	if State.day == 5 && !State.dayScripts.fifthDay.peephole:
+		State.dayScripts.fifthDay.peephole = true;
+		State.sceneManager.play_dialogue("res://assets/dialogue/5day/day5_door.dialogue")
+		State.player.global_position = Vector2.ZERO
 	else :
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");
 		

@@ -5,7 +5,7 @@ do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://ico.png")
 # Computer
-work is almost done
+work is almost done[wait=0.3][next=auto]
 
 do State.player_is_busy = true
 do State.soundBoard.playLeftFarSound('knockSound')

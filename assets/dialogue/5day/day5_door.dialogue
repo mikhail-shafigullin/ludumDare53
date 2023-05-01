@@ -1,4 +1,4 @@
-~ this_is_a_node_title
+~ door_5
 
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://ico.png")
@@ -7,11 +7,10 @@ do State.sceneManager.set_day(false)
 
 do State.soundBoard.playNonPositionalSound('placeholder')
 do State.sceneManager.ihud.novel_set_image("res://ico2.png")
-"it passes through door!?"
+fift day bad day
 
 do State.location = State.LocationState.STATE_MAIN_ROOM
 do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
-do State.dayScripts.lastDay.secondPhase = true
-*run to main room*
+
 
 => END

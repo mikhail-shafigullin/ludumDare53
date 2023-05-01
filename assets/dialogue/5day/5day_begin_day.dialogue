@@ -1,0 +1,15 @@
+~ day5_begin
+
+do State.sceneManager.set_day(true)
+do State.sceneManager.ihud.novel_show()
+# Computer
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+3 days before the deadline
+
+do State.soundBoard.playLeftFarSound('knockSound')
+Knock knock[next=auto]
+
+"Not again... I can't work with that noise, and sleep either"
+do State.ihud.novel_hide()
+
+=> END

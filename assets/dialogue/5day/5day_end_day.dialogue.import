@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bjjw5yirttso5"
+path="res://.godot/imported/5day_end_day.dialogue-181b7d43771527610670e13443d8ca39.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/5day/5day_end_day.dialogue"
+dest_files=["res://.godot/imported/5day_end_day.dialogue-181b7d43771527610670e13443d8ca39.tres"]
+
+[params]
+

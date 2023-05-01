@@ -1,0 +1,16 @@
+~ day5_end
+
+do State.sceneManager.set_day(true)
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+"I think the light will stay for tonight"
+
+*wakeup*
+
+
+do State.day = 6
+do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
+do State.sceneManager.new_day()
+do State.player_is_busy = true
+
+=> END

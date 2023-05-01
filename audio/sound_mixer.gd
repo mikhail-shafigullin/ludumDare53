@@ -11,3 +11,7 @@ func _on_sound_button_pressed():
 func _on_sound_slider_drag_ended(value_changed):
 	if value_changed:
 		AudioServer.set_bus_volume_db(0, sound_slider.value)
+
+
+func _on_sound_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(0, value)
