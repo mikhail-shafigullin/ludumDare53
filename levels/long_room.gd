@@ -39,11 +39,15 @@ func _on_door_to_the_hallway_object_used():
 func _on_staircase_up_object_used():
 	if State.day == 6:
 		print("ending 1")
+		State.sceneManager.play_dialogue("res://assets/dialogue/6day/day6_ending_up.dialogue");
 	else:
 		print("why?")
+		State.sceneManager.play_dialogue("res://assets/dialogue/why.dialogue");
 
 func _on_staircase_down_object_used():
 	if State.day == 6:
 		print("ending 2")
+		State.sceneManager.play_dialogue("res://assets/dialogue/6day/day6_ending_down.dialogue");
 	else:
 		print("why?")
+		State.sceneManager.play_dialogue("res://assets/dialogue/why.dialogue");

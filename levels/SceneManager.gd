@@ -27,6 +27,7 @@ func new_day():
 
 func set_day(day_state: bool):
 	night.visible = !day_state
+	State.room_light = !day_state
 
 func transtionTo(sceneFilePath: String):
 	transitionScenePath = sceneFilePath;

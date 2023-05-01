@@ -9,6 +9,7 @@ enum LocationState {
 	STATE_DEBUG
 }
 
+var room_light := false
 var player_is_busy := false
 var player_can_use := true
 var player: Node2D;

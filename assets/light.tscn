@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3urkofrh2ebl"]
+
+[ext_resource type="Script" path="res://light.gd" id="1_3g8my"]
+[ext_resource type="Texture2D" uid="uid://gnpnq21xhc4a" path="res://sprites/light.png" id="2_wdqx5"]
+
+[node name="light" type="Node2D"]
+process_priority = -19
+script = ExtResource("1_3g8my")
+metadata/_edit_vertical_guides_ = [-531.0]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+z_index = 2
+shadow_color = Color(0.521569, 0.521569, 0.521569, 0)
+texture = ExtResource("2_wdqx5")
+offset = Vector2(0, 95)
