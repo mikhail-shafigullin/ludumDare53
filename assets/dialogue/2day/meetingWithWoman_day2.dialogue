@@ -19,4 +19,11 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 
 Девушка: "Я бы увидела кого-нибудь, если бы кто-то выходил от вас."
 
+"Хмм, странно. Спасибо. Хорошего вам дня."
+
+Девушка: "Спасибо! Вам того же."
+
+do State.dayScripts.secondDay.meetWithWoman = true
+do State.sceneManager.transtionToWithEvent("res://levels/hallway_scene.tscn", "afterMetWithWomen")
+
 => END

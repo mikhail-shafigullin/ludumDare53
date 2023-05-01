@@ -13,6 +13,6 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 
 do State.soundBoard.playLeftNearSound('openDoor')
 
-do State.sceneManager.transtionToWithEvent("res://levels/long_room_scene.tscn", "meetingWithWomen")
+do State.sceneManager.transtionToWithEvent("res://levels/long_room.tscn", "meetingWithWomen")
 
 => END

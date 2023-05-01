@@ -20,7 +20,7 @@ func teleportTo1Day():
 func teleportTo2Day():
 	State.day = 1;
 	State.transitionEventKey = '2dayStart'
-	State.location = State.LocationState.STATE_DEBUG;
+	State.location = State.LocationState.STATE_MAIN_ROOM;
 	State.sceneManager.transtionTo("res://levels/main_room_scene.tscn");
 
 func teleportTo3Day():

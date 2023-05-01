@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		
 	var is_item_used = Input.is_action_just_pressed("use");
 	if is_item_used && hovered_item && !State.player_is_busy:
-		if !hovered_item.item_on_cooldown:
+		if !hovered_item.item_on_cooldown && State.player_can_use:
 			hovered_item.emit_signal('object_used');
 
 

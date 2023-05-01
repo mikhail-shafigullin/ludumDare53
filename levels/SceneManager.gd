@@ -2,7 +2,7 @@ extends Node2D
 @onready var ihud = $interactiveHud
 @onready var night = $Night
 @onready var debug_menu = $debugMenu
-
+@onready var after_dialog_timer = $AfterDialogTimeout
 
 var transitionScenePath: String;
 signal transition
@@ -81,6 +81,8 @@ func _on_dialog_end() -> void:
 	State.sceneManager.ihud.novel_hide()
 	has_balloon = false
 	State.player_is_busy = false
+	State.player_can_use = false
+	after_dialog_timer.start();
 
 func restart_day() -> void:
 	match State.day:
@@ -96,3 +98,7 @@ func restart_day() -> void:
 			pass
 		6:
 			debug_menu.teleportTo6Day()
+
+
+func _on_after_dialog_timeout_timeout():
+	State.player_can_use = true

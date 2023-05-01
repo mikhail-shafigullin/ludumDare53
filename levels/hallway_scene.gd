@@ -10,7 +10,9 @@ func _ready():
 	elif State.location == State.LocationState.STATE_LONG_ROOM:
 		State.player.transform = $Marker_fromEntrance.transform
 	else:
-		State.player.transform = $Marker_fromEntrance.transform
+		State.player.transform = $Marker_fromEntrance.transform;
+		
+	checkReadyEvents();
 		
 	State.location = State.LocationState.STATE_HALLWAY;
 
@@ -72,3 +74,13 @@ func events_daySix():
 		State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "fromPeepholeDayOne")
 	else :
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");
+		
+func checkReadyEvents():
+	match State.day :
+		2: 
+			readyEvents_daySecond()
+			
+func readyEvents_daySecond():
+	if State.transitionEventKey == 'afterMetWithWomen':
+		State.sceneManager.play_dialogue("res://assets/dialogue/2day/afterMeetingWithWomen_day2.dialogue");
+		State.transitionEventKey = '';

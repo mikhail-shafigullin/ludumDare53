@@ -41,6 +41,9 @@ autoplay = "fade_to_black"
 
 [node name="SoundBoard" parent="." instance=ExtResource("6_qsyu8")]
 
+[node name="AfterDialogTimeout" type="Timer" parent="."]
+
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_transition_screen_transitioned"]
+[connection signal="timeout" from="AfterDialogTimeout" to="." method="_on_after_dialog_timeout_timeout"]
 
 [editable path="TransitionScreen"]

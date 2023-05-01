@@ -10,6 +10,7 @@ enum LocationState {
 }
 
 var player_is_busy := false
+var player_can_use := true
 var player: Node2D;
 var location: LocationState;
 var sceneManager: Node2D;
