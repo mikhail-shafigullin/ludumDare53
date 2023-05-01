@@ -1,0 +1,20 @@
+import "res://assets/dialogue/credits.dialogue" as a_credits
+
+~ ending_up
+
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://ico.png")
+
+do State.sceneManager.ihud.novel_hide()
+do State.player_is_busy = true
+
+=><a_credits/credits
+
+=> END
+
+
+
+
+
+
+

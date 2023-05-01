@@ -1,0 +1,7 @@
+~ credits
+
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://ico.png")
+thanks for playing
+
+=> END

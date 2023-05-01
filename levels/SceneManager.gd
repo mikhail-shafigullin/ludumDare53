@@ -87,15 +87,15 @@ func _on_dialog_end() -> void:
 func restart_day() -> void:
 	match State.day:
 		1:
-			pass
+			debug_menu.teleportTo1Day()
 		2:
-			pass
+			debug_menu.teleportTo2Day()
 		3:
-			pass
+			debug_menu.teleportTo3Day()
 		4:
-			pass
+			debug_menu.teleportTo4Day()
 		5:
-			pass
+			debug_menu.teleportTo5Day()
 		6:
 			debug_menu.teleportTo6Day()
 
