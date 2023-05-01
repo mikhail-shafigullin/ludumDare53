@@ -5,13 +5,19 @@ import "res://assets/dialogue/credits.dialogue" as a_credits
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down1.png")
 
-going down
+Я выбежал из дома на полной скорости
+
+Я бежал и бежал километр за километром, наполненный адреналином
 
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down2.png")
-top-top
+Но они найдут меня везде...
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
+
+Bad Ending...
+
+Maybe you need to take the letter from the trash can and go to the top floor.
 
 =>< a_credits/credits
 
