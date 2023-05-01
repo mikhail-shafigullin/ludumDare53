@@ -7,7 +7,11 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 "Что? Что это?"
 
 # Peephole without movement
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_EbakaPart1.png")
+[wait=1].[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_EbakaPart2.png")
+[wait=1].[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_DayEmpty.png")
 
 "Кто там?"
 

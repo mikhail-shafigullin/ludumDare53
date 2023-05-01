@@ -1,12 +1,25 @@
 ~ this_is_a_node_title
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
 do State.sceneManager.set_day(false)
-...[wait=0.1][next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEmpty.png")
+[next=auto]
+
+
+do wait(1)
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka.png")
 
 do State.soundBoard.playNonPositionalSound('placeholder')
-do State.sceneManager.ihud.novel_set_image("res://ico2.png")
+
+do wait(1)
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka02.png")
+
+do wait(1)
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka03.png")
+
 "it passes through door!?"
 
 do State.location = State.LocationState.STATE_MAIN_ROOM

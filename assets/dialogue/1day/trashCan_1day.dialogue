@@ -5,7 +5,7 @@ do State.player_is_busy = true
 
 do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
-# Peephole_with_man
+# Letter Reading
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
 do State.soundBoard.playNonPositionalSound("darkOne")
 Хмм

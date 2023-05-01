@@ -5,7 +5,7 @@
 
 do State.sceneManager.ihud.novel_show()
 # Peephole_with_man
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Courier.png")
 "Кто там?"
 
 Мужчина: "Вам посылка"
@@ -13,7 +13,7 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 do State.soundBoard.playLeftFarSound('openDoor')
 
 # Letter
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Letter.png")
 Здравствуйте!
 
 Вам письмо с личной доставкой.
