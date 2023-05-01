@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cmxvbio4y6m68" path="res://ico.png" id="1_wexkv"]
 
 [node name="Novel" type="Control"]
+custom_minimum_size = Vector2(800, 300)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,10 +23,17 @@ color = Color(0, 0, 0, 1)
 [node name="Image" type="TextureRect" parent="."]
 texture_filter = 1
 texture_repeat = 1
+custom_minimum_size = Vector2(800, 300)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -150.0
+offset_right = 400.0
+offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_wexkv")
