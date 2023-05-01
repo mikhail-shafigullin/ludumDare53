@@ -16,10 +16,22 @@ var sceneManager: Node2D;
 var ihud: CanvasLayer;
 var day: int = 1;
 var soundBoard: Node2D;
+var transitionEventKey: String;
 
 var dayScripts = {
 	"firstDay": {
 		"beginOfDay": false,
 		"peephole": false,
+		"wentToKitchen": false,
 	},
 };
+
+var dayScripts_DEFAULT = {
+	"firstDay": {
+		"beginOfDay": false,
+		"peephole": false,
+		"wentToKitchen": false,
+	},
+};
+
+

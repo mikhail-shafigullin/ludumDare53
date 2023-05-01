@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bage8filjbqbl"
+path="res://.godot/imported/trashCan_1day.dialogue-5034adaeb9297a5358efa6c3427e5393.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/1day/trashCan_1day.dialogue"
+dest_files=["res://.godot/imported/trashCan_1day.dialogue-5034adaeb9297a5358efa6c3427e5393.tres"]
+
+[params]
+

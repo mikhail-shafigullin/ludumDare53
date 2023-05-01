@@ -5,6 +5,8 @@ extends Node2D
 func _ready():
 	if State.location == State.LocationState.STATE_HALLWAY:
 		State.player.transform = get_node('Marker_fromHallway').transform
+	if State.location == State.LocationState.STATE_BALCONY:
+		State.player.transform = $Marker_fromBalcony.transform
 	else:
 		State.player.transform = get_node('StartMarker').transform
 	

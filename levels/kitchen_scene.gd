@@ -3,7 +3,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if State.location == State.LocationState.STATE_HALLWAY:
+	if State.transitionEventKey == 'fromPeepholeDayOne':
+		State.player.transform = $Marker_trashCan.transform;
+		State.player_is_busy = false;
+		State.sceneManager.play_dialogue("res://assets/dialogue/1day/trashCan_1day.dialogue");
+		State.transitionEventKey = '';
+	elif State.location == State.LocationState.STATE_HALLWAY:
 		State.player.transform = $Marker_fromHallway.transform
 	elif State.location == State.LocationState.STATE_BALCONY:
 		State.player.transform = $Marker_fromBalcony.transform

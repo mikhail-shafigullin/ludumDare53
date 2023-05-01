@@ -19,9 +19,8 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 Вам письмо с личной доставкой.
 
 do State.ihud.novel_hide()
-do State.player_is_busy = false
+do State.player_is_busy = true
 
-do State.sceneManager.transtionTo("res://levels/hallway_scene.tscn")
-
+Посмотрю на кухне
 
 => END

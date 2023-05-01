@@ -13,6 +13,7 @@ func _process(delta):
 func teleportTo1Day():
 	State.day = 1;
 	State.location = State.LocationState.STATE_DEBUG;
+	State.dayScripts = State.dayScripts_DEFAULT.duplicate(true)
 	State.sceneManager.transtionTo("res://levels/main_room_scene.tscn");
 	State.sceneManager.startFirstDay();
 	

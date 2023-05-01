@@ -21,6 +21,13 @@ func transtionTo(sceneFilePath: String):
 	State.player_is_busy = true;
 	$TransitionScreen.transition();
 	transition.emit()
+	
+func transtionToWithEvent(sceneFilePath: String, eventKey: String):
+	transitionScenePath = sceneFilePath;
+	State.player_is_busy = true;
+	State.transitionEventKey = eventKey;
+	$TransitionScreen.transition();
+	transition.emit()
 
 func _on_transition_screen_transitioned():
 	$CurrentScene.get_child(0).queue_free();
@@ -35,8 +42,9 @@ func play_dialogue(path_to_dialogue: String):
 	State.player_is_busy = true
 	
 	var balloon: Node = Balloon.instantiate()
-	$CurrentScene.get_child(0).add_child(balloon)
-	balloon.start(load(path_to_dialogue), "start")
+	$CurrentScene.get_child($CurrentScene.get_child_count() - 1).add_child(balloon)
+	var dialogue = load(path_to_dialogue)
+	balloon.start(dialogue, "start")
 	balloon.tree_exiting.connect(_on_dialog_end)
 	
 func startFirstDay():

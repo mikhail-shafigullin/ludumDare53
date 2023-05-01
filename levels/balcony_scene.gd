@@ -17,11 +17,9 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_door_to_main_room_object_used():
 	State.sceneManager.transtionTo("res://levels/main_room_scene.tscn");
 	print('Go to the main room');
-
 
 func _on_door_to_kitchen_object_used():
 	State.sceneManager.transtionTo("res://levels/kitchen_scene.tscn");

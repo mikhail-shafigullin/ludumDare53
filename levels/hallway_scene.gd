@@ -40,5 +40,8 @@ func peepholeCheck():
 		State.sceneManager.play_dialogue("res://assets/dialogue/1day/peephole_1day.dialogue");
 		State.dayScripts.firstDay.peephole = true;
 		return true;
+	elif State.day == 1 && !State.dayScripts.firstDay.wentToKitchen:
+		State.dayScripts.firstDay.wentToKitchen = true;
+		State.sceneManager.transtionToWithEvent("res://levels/kitchen_scene.tscn", "fromPeepholeDayOne")
 	else: 
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");
