@@ -11,6 +11,7 @@ Knock knock
 
 [wait = 1]
 "Кто на этот раз?"
+do State.soundBoard.playNonPositionalSound("ePiano")
 do State.ihud.novel_hide()
 
 => END

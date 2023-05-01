@@ -14,7 +14,8 @@ var has_balloon := false
 func _ready():
 	State.sceneManager = self
 	State.soundBoard = $SoundBoard;
-	new_day()
+	State.soundBoard.playNonPositionalSound("ePiano");
+	new_day();
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func new_day():

@@ -29,7 +29,7 @@ func on_bed_day1():
 		
 func on_bed_day2():
 	if State.dayScripts.secondDay.meetWithWoman && !State.dayScripts.secondDay.goToSleep:
-		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
+		State.sceneManager.play_dialogue("res://assets/dialogue/2day/goToSleep_day2.dialogue");
 	else :
 		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
 

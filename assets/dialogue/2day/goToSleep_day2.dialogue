@@ -9,13 +9,21 @@ do State.dayScripts.secondDay.goToSleep = true
 # BedTime
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.soundBoard.playNonPositionalSound("darkOne")
 
 Получается эта девушка живет выше меня.
 
 Надо будет завтра закончить с этой работой.
 
-do State.soundBoard.playRightNearSound('scratchSound')
+do State.soundBoard.playRightNearSound("nightKnock")
+...
 
+Что это?
+
+Звук откуда-то сверху...
+
+do State.soundBoard.stopRightNearSound()
+do State.soundBoard.stopNonPositionalSound()
 
 
 => END

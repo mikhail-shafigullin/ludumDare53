@@ -7,6 +7,7 @@ do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 # Peephole_with_man
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.soundBoard.playNonPositionalSound("darkOne")
 Хмм
 
 "Ты умреешь через шесть дней, если не отправишь это письмо кому-нибудь еще!"
@@ -22,7 +23,9 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 Уже личную рассылку мусорной почты занимаются.
 
 do State.ihud.novel_hide()
+do State.dayScripts.firstDay.wentToKitchen = true
 do State.player_is_busy = true
 Ладно, надо ложиться спать.
+do State.soundBoard.playNonPositionalSound("ePiano")
 
 => END

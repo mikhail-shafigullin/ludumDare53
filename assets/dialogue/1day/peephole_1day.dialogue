@@ -23,4 +23,6 @@ do State.player_is_busy = true
 
 Посмотрю на кухне
 
+do State.sceneManager.transtionToWithEvent("res://levels/kitchen_scene.tscn", "fromPeepholeDayOne")
+
 => END

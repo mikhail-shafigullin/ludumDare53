@@ -3,6 +3,9 @@ extends Node2D
 var knockSound = preload("res://audio/KnockSound01.wav");
 var openDoor = preload("res://audio/OpenDoor01.wav");
 var scratchSound = preload("res://audio/ScratchSound0101.wav");
+var nightKnock = preload("res://audio/NightKnock01.wav");
+var ePiano = preload("res://audio/ePiano.mp3");
+var darkOne = preload("res://audio/darkOne.mp3");
 var placeholder = preload("res://audio/placeholder.mp3");
 
 enum SoundLocation{
@@ -17,6 +20,9 @@ var dictionary = {
 	'knockSound': knockSound,
 	'openDoor': openDoor,
 	'scratchSound': scratchSound,
+	'nightKnock': nightKnock,
+	'ePiano': ePiano,
+	'darkOne': darkOne,
 	'placeholder': placeholder
 }
 
@@ -40,10 +46,15 @@ func playRightFarSound(soundKey: String):
 	
 func playRightNearSound(soundKey: String):
 	playSoundInto(soundKey, SoundLocation.RIGHT_NEAR);
+	
+func stopRightNearSound():
+	stopSoundInto(SoundLocation.RIGHT_NEAR);
 
 func playNonPositionalSound(soundKey: String):
 	playSoundInto(soundKey, SoundLocation.NON_POSITIONAL);
-
+	
+func stopNonPositionalSound():
+	stopSoundInto(SoundLocation.NON_POSITIONAL);
 
 func chooseSoundSource(location: SoundLocation):
 	match (location):
@@ -60,5 +71,10 @@ func chooseSoundSource(location: SoundLocation):
 	
 	
 func playSoundInto(soundKey: String, location: SoundLocation):
-	$LeftFarSound.stream = dictionary[soundKey];
-	$LeftFarSound.play();
+	var soundLocation = chooseSoundSource(location);
+	soundLocation.stream = dictionary[soundKey];
+	soundLocation.play();
+	
+func stopSoundInto(location: SoundLocation):
+	var soundLocation = chooseSoundSource(location);
+	soundLocation.stop();
