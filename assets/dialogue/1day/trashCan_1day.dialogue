@@ -11,8 +11,18 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 
 "Ты умреешь через шесть дней, если не отправишь это письмо кому-нибудь еще!"
 
+Странно...
+
+Ох, чертовы спамеры
+# Throw to the trash can
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+
+Надо будет позвонить в эту доставочкную компанию.
+
+Уже личную рассылку мусорной почты занимаются.
 
 do State.ihud.novel_hide()
-do State.player_is_busy = false
+do State.player_is_busy = true
+Ладно, надо ложиться спать.
 
 => END

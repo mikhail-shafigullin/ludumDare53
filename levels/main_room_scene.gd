@@ -4,8 +4,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if State.location == State.LocationState.STATE_HALLWAY:
-		State.player.transform = get_node('Marker_fromHallway').transform
-	if State.location == State.LocationState.STATE_BALCONY:
+		State.player.transform = $Marker_fromHallway.transform
+	elif State.location == State.LocationState.STATE_BALCONY:
 		State.player.transform = $Marker_fromBalcony.transform
 	else:
 		State.player.transform = get_node('StartMarker').transform
@@ -26,3 +26,20 @@ func _on_door_to_the_hallway_object_used():
 func _on_door_to_the_balcony_object_used():
 	State.sceneManager.transtionTo("res://levels/balcony_scene.tscn");
 	print('Go to the balcony');
+
+
+func _on_bed_object_used():
+	match State.day :
+		1:
+			on_bed_day1();
+		_:
+			State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue");
+	
+	pass # Replace with function body.
+
+func on_bed_day1():
+	if State.dayScripts.firstDay.wentToKitchen && !State.dayScripts.firstDay.goToSleep:
+		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
+	else :
+		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
+
