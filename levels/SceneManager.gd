@@ -104,3 +104,9 @@ func restart_day() -> void:
 
 func _on_after_dialog_timeout_timeout():
 	State.player_can_use = true
+
+
+func _on_bosy_timer_timeout():
+	var ballon = $CurrentScene.get_child_count() > 1
+	if ballon:
+		State.player_is_busy = true

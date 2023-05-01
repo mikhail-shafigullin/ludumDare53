@@ -43,7 +43,12 @@ autoplay = "fade_to_black"
 
 [node name="AfterDialogTimeout" type="Timer" parent="."]
 
+[node name="BosyTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
 [connection signal="transitioned" from="TransitionScreen" to="." method="_on_transition_screen_transitioned"]
 [connection signal="timeout" from="AfterDialogTimeout" to="." method="_on_after_dialog_timeout_timeout"]
+[connection signal="timeout" from="BosyTimer" to="." method="_on_bosy_timer_timeout"]
 
 [editable path="TransitionScreen"]
