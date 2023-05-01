@@ -6,7 +6,8 @@ do State.sceneManager.set_day(false)
 
 who is it!?
 
+do State.location = State.LocationState.STATE_MAIN_ROOM
+do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
 do State.dayScripts.lastDay.secondPhase = true
-do State.sceneManager.transtionTo("res://levels/main_room_scene.tsc")
 
 => END

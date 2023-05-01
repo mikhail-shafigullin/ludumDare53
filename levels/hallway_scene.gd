@@ -69,6 +69,6 @@ func events_daySix():
 	if State.day == 6 && !State.dayScripts.lastDay.secondPhase:
 		State.dayScripts.lastDay.secondPhase = true;
 		State.player.global_position = Vector2.ZERO
-		State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "fromPeepholeDayOne")
+		State.sceneManager.play_dialogue("res://assets/dialogue/6day/day6_door.dialogue")
 	else :
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");
