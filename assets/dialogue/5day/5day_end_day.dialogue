@@ -2,7 +2,7 @@
 
 do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
 "I think the light will stay for tonight"
 
 *wakeup*

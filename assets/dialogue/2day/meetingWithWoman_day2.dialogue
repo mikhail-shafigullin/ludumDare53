@@ -2,7 +2,8 @@
 
 do State.sceneManager.ihud.novel_show()
 # Conversation with woman
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/GirlMeeting.png")
+do State.soundBoard.stopNonPositionalSound()
 
 ...
 Вверх по лестнице поднимается девушка.
@@ -23,6 +24,7 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 
 Девушка: "Спасибо! Вам того же."
 
+do State.soundBoard.playNonPositionalSound("ePiano")
 do State.dayScripts.secondDay.meetWithWoman = true
 do State.sceneManager.transtionToWithEvent("res://levels/hallway_scene.tscn", "afterMetWithWomen")
 

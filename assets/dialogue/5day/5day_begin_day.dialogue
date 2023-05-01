@@ -3,7 +3,7 @@
 do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_show()
 # Computer
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
 3 days before the deadline
 
 do State.soundBoard.playLeftFarSound('knockSound')

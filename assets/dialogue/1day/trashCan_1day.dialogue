@@ -6,7 +6,7 @@ do State.player_is_busy = true
 do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 # Letter Reading
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/LetterDelivery.png")
 do State.soundBoard.playNonPositionalSound("darkOne")
 Хмм
 
@@ -16,7 +16,7 @@ do State.soundBoard.playNonPositionalSound("darkOne")
 
 Ох, чертовы спамеры
 # Throw to the trash can
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/ThrowLetter.png")
 
 Надо будет позвонить в эту доставочкную компанию.
 

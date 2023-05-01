@@ -1,7 +1,7 @@
 ~ this_is_a_node_title
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
 do State.sceneManager.set_day(false)
 
 computa
