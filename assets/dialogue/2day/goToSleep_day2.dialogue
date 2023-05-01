@@ -1,0 +1,21 @@
+~ goToSleep_day2
+
+
+do State.dayScripts.secondDay.goToSleep = true
+Странно, конечно! Я точно кого-то видел в дверной глазок.
+
+Ладно, надо отхдохнуть
+
+# BedTime
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+
+Получается эта девушка живет выше меня.
+
+Надо будет завтра закончить с этой работой.
+
+do State.soundBoard.playRightNearSound('scratchSound')
+
+
+
+=> END

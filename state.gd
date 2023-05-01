@@ -30,6 +30,7 @@ var dayScripts := {
 		"beginOfDay": false,
 		"peephole": false,
 		"meetWithWoman": false,
+		"goToSleep": false,
 	},
 	"lastDay": {
 		"beginOfDay": false,
@@ -49,6 +50,7 @@ var dayScripts_DEFAULT := {
 		"beginOfDay": false,
 		"peephole": false,
 		"meetWithWoman": false,
+		"goToSleep": false,
 	},
 	"lastDay": {
 		"beginOfDay": false,

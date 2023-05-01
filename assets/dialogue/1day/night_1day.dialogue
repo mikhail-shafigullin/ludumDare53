@@ -5,7 +5,7 @@ do State.dayScripts.firstDay.goToSleep = true
 Ох, тяжелый день.
 
 do State.sceneManager.ihud.novel_show()
-# Peephole_with_man
+# BedTime
 do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
 Завтра надо будет закончить работу, и можно будет отдыхать.
 

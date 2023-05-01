@@ -26,6 +26,12 @@ func on_bed_day1():
 		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
 	else :
 		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
+		
+func on_bed_day2():
+	if State.dayScripts.secondDay.meetWithWoman && !State.dayScripts.secondDay.goToSleep:
+		State.sceneManager.play_dialogue("res://assets/dialogue/1day/night_1day.dialogue");
+	else :
+		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
 
 func startSecondDay():
 	print('Second day start')
@@ -48,6 +54,8 @@ func _on_bed_object_used():
 	match State.day :
 		1:
 			on_bed_day1();
+		2:
+			on_bed_day2();
 		_:
 			State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue");
 	
