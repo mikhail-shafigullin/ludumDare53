@@ -47,12 +47,15 @@ gizmo_extents = 17.8
 
 [node name="DoorToTheKitchen" parent="." instance=ExtResource("5_r5fuf")]
 position = Vector2(776, 295)
+USE_MESSAGE = "Go to the Kitchen?"
 
 [node name="DoorToTheEntrance" parent="." instance=ExtResource("5_r5fuf")]
 position = Vector2(213, 295)
+USE_MESSAGE = "Go to Entrance?"
 
 [node name="DoorToTheMainRoom" parent="." instance=ExtResource("5_r5fuf")]
 position = Vector2(498, 295)
+USE_MESSAGE = "Go to My Room?"
 
 [node name="MonsterDoor" parent="." instance=ExtResource("5_b1kwm")]
 position = Vector2(189, 281)

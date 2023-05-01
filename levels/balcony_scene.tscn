@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca5qhghigpesg"]
+
+[ext_resource type="Script" path="res://levels/balcony_scene.gd" id="1_nrsvw"]
+[ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="1_vturl"]
+[ext_resource type="Texture2D" uid="uid://ce8x68l7152xd" path="res://sprites/Room_Balcony.png" id="3_8g3wk"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="3_ef1xg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_or7a3"]
+shader = ExtResource("1_vturl")
+shader_parameter/pixelSize = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vav38"]
+size = Vector2(152, 394)
+
+[node name="Balcony" type="Node2D"]
+script = ExtResource("1_nrsvw")
+
+[node name="Room01" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_or7a3")
+position = Vector2(704, 228.75)
+scale = Vector2(0.660807, 0.660807)
+texture = ExtResource("3_8g3wk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(211, 46)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-9, 195)
+shape = SubResource("RectangleShape2D_vav38")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(715, 186)
+shape = SubResource("RectangleShape2D_vav38")
+
+[node name="Marker_fromMainRoom" type="Marker2D" parent="."]
+position = Vector2(701, 295)
+gizmo_extents = 17.8
+
+[node name="Marker_fromKitchen" type="Marker2D" parent="."]
+position = Vector2(418, 295)
+gizmo_extents = 17.8
+
+[node name="DoorToMainRoom" parent="." instance=ExtResource("3_ef1xg")]
+position = Vector2(702, 295)
+USE_MESSAGE = "Go to the my room?"
+
+[node name="DoorToKitchen" parent="." instance=ExtResource("3_ef1xg")]
+position = Vector2(417, 295)
+USE_MESSAGE = "Go to the Kitchen?"
+
+[connection signal="object_used" from="DoorToMainRoom" to="." method="_on_door_to_main_room_object_used"]
+[connection signal="object_used" from="DoorToKitchen" to="." method="_on_door_to_kitchen_object_used"]

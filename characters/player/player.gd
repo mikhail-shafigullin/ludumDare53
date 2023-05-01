@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		body.speed_scale = abs(velocity.x/80)
 		
 	var is_item_used = Input.is_action_just_pressed("use");
-	if is_item_used && hovered_item :
+	if is_item_used && hovered_item && !State.player_is_busy:
 		if !hovered_item.item_on_cooldown:
 			hovered_item.emit_signal('object_used');
 
@@ -70,7 +70,6 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _on_usable_object_hovered(usable_object: Node2D):
-	print('player hover usable_object');
 	hovered_item = usable_object;
 	if State.ihud:
 		if hovered_item.USE_MESSAGE:
@@ -85,7 +84,6 @@ func _on_usable_object_hovered(usable_object: Node2D):
 
 
 func _on_usable_object_unhovered(usable_object):
-	print('player unhover usable_object');
 	hovered_item = null;
 	if State.ihud:
 		State.ihud.item_clear()

@@ -10,10 +10,7 @@ const Balloon = preload("res://assets/dialogue/ballon/balloon.tscn")
 func _ready():
 	State.sceneManager = self
 	State.soundBoard = $SoundBoard;
-	
-	if State.day == 1 && !State.dayScripts.firstDay.beginOfDay:
-		print("Start script for begin of the day");
-		playDialogueComputer_DayOne();
+	startFirstDay();
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -41,6 +38,11 @@ func play_dialogue(path_to_dialogue: String):
 	$CurrentScene.get_child(0).add_child(balloon)
 	balloon.start(load(path_to_dialogue), "start")
 	balloon.tree_exiting.connect(_on_dialog_end)
+	
+func startFirstDay():
+	if State.day == 1 && !State.dayScripts.firstDay.beginOfDay:
+		print("Start script for begin of the day");
+		playDialogueComputer_DayOne();
 	
 func playDialogueComputer_DayOne():
 	State.sceneManager.play_dialogue("res://assets/dialogue/1day/beginOfDay.dialogue");

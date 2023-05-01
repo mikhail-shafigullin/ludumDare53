@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if State.location == State.LocationState.STATE_KITCHEN:
+	if State.location == State.LocationState.STATE_HALLWAY:
 		State.player.transform = get_node('Marker_fromHallway').transform
 	else:
 		State.player.transform = get_node('StartMarker').transform
@@ -22,4 +22,5 @@ func _on_door_to_the_hallway_object_used():
 	
 
 func _on_door_to_the_balcony_object_used():
+	State.sceneManager.transtionTo("res://levels/balcony_scene.tscn");
 	print('Go to the balcony');

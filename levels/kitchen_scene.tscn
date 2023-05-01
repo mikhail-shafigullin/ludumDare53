@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://cs2omieit2bge"]
+
+[ext_resource type="Script" path="res://levels/kitchen_scene.gd" id="1_pyq4d"]
+[ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="1_xnd57"]
+[ext_resource type="Texture2D" uid="uid://dr3spt1ckcw1n" path="res://sprites/Room_Kitchen.png" id="2_oys1h"]
+[ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="3_b0w1s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ygp1c"]
+shader = ExtResource("1_xnd57")
+shader_parameter/pixelSize = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5emr0"]
+size = Vector2(152, 394)
+
+[node name="Kitchen" type="Node2D"]
+script = ExtResource("1_pyq4d")
+
+[node name="Room01" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ygp1c")
+position = Vector2(777, 228.75)
+scale = Vector2(0.660807, 0.660807)
+texture = ExtResource("2_oys1h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(211, 46)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-100, 195)
+shape = SubResource("RectangleShape2D_5emr0")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(829, 186)
+shape = SubResource("RectangleShape2D_5emr0")
+
+[node name="Marker_fromBalcony" type="Marker2D" parent="."]
+position = Vector2(940, 295)
+gizmo_extents = 17.8
+
+[node name="Marker_trashCan" type="Marker2D" parent="."]
+position = Vector2(776, 295)
+gizmo_extents = 17.8
+
+[node name="Marker_fromHallway" type="Marker2D" parent="."]
+position = Vector2(213, 295)
+gizmo_extents = 17.8
+
+[node name="TrashCan" parent="." instance=ExtResource("3_b0w1s")]
+position = Vector2(733, 295)
+USE_MESSAGE = "Look in the trash can?"
+
+[node name="DoorToTheHallway" parent="." instance=ExtResource("3_b0w1s")]
+position = Vector2(213, 295)
+USE_MESSAGE = "Go to the Hallway?"
+
+[node name="DoorToTheBalcony" parent="." instance=ExtResource("3_b0w1s")]
+position = Vector2(940, 295)
+USE_MESSAGE = "Go to the Balcony?"
+
+[connection signal="object_used" from="TrashCan" to="." method="_on_trash_can_object_used"]
+[connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
+[connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]

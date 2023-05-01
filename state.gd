@@ -5,6 +5,7 @@ enum LocationState {
 	STATE_HALLWAY, 
 	STATE_KITCHEN, 
 	STATE_LONG_ROOM,
+	STATE_BALCONY, 
 	STATE_DEBUG
 }
 
@@ -19,5 +20,6 @@ var soundBoard: Node2D;
 var dayScripts = {
 	"firstDay": {
 		"beginOfDay": false,
+		"peephole": false,
 	},
 };

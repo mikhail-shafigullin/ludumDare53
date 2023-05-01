@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhmfvrcbx4eei"]
+[gd_scene load_steps=8 format=3 uid="uid://bhmfvrcbx4eei"]
 
 [ext_resource type="Script" path="res://levels/main_room_scene.gd" id="1_r42hg"]
 [ext_resource type="Shader" path="res://materials/pixelate.gdshader" id="2_w5cku"]
 [ext_resource type="Texture2D" uid="uid://be4u1cop34w6h" path="res://sprites/Room_MainRoom.png" id="4_db32k"]
 [ext_resource type="PackedScene" uid="uid://bqal12aijsoke" path="res://assets/UsableObject.tscn" id="5_gtyru"]
-[ext_resource type="PackedScene" uid="uid://b4003uvlshec" path="res://assets/cutscene/monster_door.tscn" id="6_i6a22"]
 [ext_resource type="PackedScene" uid="uid://devuhi5tt7nfa" path="res://assets/item/TestItem.tscn" id="7_1le5h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nkff4"]
@@ -55,9 +54,5 @@ position = Vector2(220, 295)
 [node name="Marker_fromBalcony" type="Marker2D" parent="."]
 position = Vector2(920, 295)
 
-[node name="MonsterDoor" parent="." instance=ExtResource("6_i6a22")]
-
 [connection signal="object_used" from="DoorToTheHallway" to="." method="_on_door_to_the_hallway_object_used"]
 [connection signal="object_used" from="DoorToTheBalcony" to="." method="_on_door_to_the_balcony_object_used"]
-
-[editable path="MonsterDoor"]

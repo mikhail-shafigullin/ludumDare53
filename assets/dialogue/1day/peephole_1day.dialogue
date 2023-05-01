@@ -1,0 +1,27 @@
+~ peephole_1day
+
+do State.player_is_busy = true
+Кто это может быть? Я никого не жду.
+
+do State.sceneManager.ihud.novel_show()
+# Peephole_with_man
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+"Кто там?"
+
+Мужчина: "Вам посылка"
+
+do State.soundBoard.playLeftFarSound('openDoor')
+
+# Letter
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+Здравствуйте!
+
+Вам письмо с личной доставкой.
+
+do State.ihud.novel_hide()
+do State.player_is_busy = false
+
+do State.sceneManager.transtionTo("res://levels/hallway_scene.tscn")
+
+
+=> END

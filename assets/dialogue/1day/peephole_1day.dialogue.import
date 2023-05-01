@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bpbnlsoievac5"
+path="res://.godot/imported/peephole_1day.dialogue-68f7b032d524ceb4613082b4bf64bd77.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/1day/peephole_1day.dialogue"
+dest_files=["res://.godot/imported/peephole_1day.dialogue-68f7b032d524ceb4613082b4bf64bd77.tres"]
+
+[params]
+

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bhmfvrcbx4eei" path="res://levels/main_room_scene.tscn" id="2_n40qn"]
 [ext_resource type="PackedScene" uid="uid://dqs6vdvxa4y4w" path="res://ui/TransitionScreen.tscn" id="3_07cap"]
 [ext_resource type="PackedScene" uid="uid://dd8awmlfdgv0q" path="res://ui/interactiveHud.tscn" id="3_fcwdx"]
-[ext_resource type="PackedScene" uid="uid://dkuo8nuqb041o" path="res://ui/debugMenu.tscn" id="5_irqg0"]
-[ext_resource type="PackedScene" uid="uid://dwlspwc8834ks" path="res://audio/sound_board.tscn" id="6_qsyu8"]
+[ext_resource type="PackedScene" uid="uid://gy18rk6wed3d" path="res://ui/debugMenu.tscn" id="5_irqg0"]
+[ext_resource type="PackedScene" uid="uid://b5rjthc60t8ie" path="res://audio/sound_board.tscn" id="6_qsyu8"]
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_dnu1y")
