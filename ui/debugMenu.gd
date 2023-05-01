@@ -48,14 +48,11 @@ func teleportTo6Day():
 func _on_1_day_button_pressed():
 	teleportTo1Day();
 
-
 func _on_2_day_button_pressed():
 	teleportTo2Day();
 
-
 func _on_3_day_button_pressed():
 	teleportTo3Day();
-
 
 func _on_4_day_button_pressed():
 	teleportTo4Day();

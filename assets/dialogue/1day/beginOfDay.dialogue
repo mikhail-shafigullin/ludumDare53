@@ -7,7 +7,7 @@ do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.
 "Just another ordinary day. Time to get to work."
 
 do State.soundBoard.playLeftFarSound('knockSound')
-Sound of knocking
+Knock knock
 
 [wait = 1]
 "Who is it?"

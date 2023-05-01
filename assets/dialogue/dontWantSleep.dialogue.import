@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dps16w6q1y0cw"
+path="res://.godot/imported/dontWantSleep.dialogue-bc2ad426122a623f905b9bab6667a9e4.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/dontWantSleep.dialogue"
+dest_files=["res://.godot/imported/dontWantSleep.dialogue-bc2ad426122a623f905b9bab6667a9e4.tres"]
+
+[params]
+

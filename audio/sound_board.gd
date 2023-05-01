@@ -2,6 +2,7 @@ extends Node2D
 
 var knockSound = preload("res://audio/KnockSound01.wav");
 var openDoor = preload("res://audio/OpenDoor01.wav");
+var scratchSound = preload("res://audio/ScratchSound0101.wav");
 enum SoundLocation{
 	LEFT_FAR,
 	LEFT_NEAR,
@@ -12,7 +13,8 @@ enum SoundLocation{
 
 var dictionary = {
 	'knockSound': knockSound,
-	'openDoor': openDoor
+	'openDoor': openDoor,
+	'scratchSound': scratchSound
 }
 
 # Called when the node enters the scene tree for the first time.
