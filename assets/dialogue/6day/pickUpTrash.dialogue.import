@@ -1,0 +1,14 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://duuafewrebtle"
+path="res://.godot/imported/pickUpTrash.dialogue-d319c076b811c5947ff1763931c73f66.tres"
+
+[deps]
+
+source_file="res://assets/dialogue/6day/pickUpTrash.dialogue"
+dest_files=["res://.godot/imported/pickUpTrash.dialogue-d319c076b811c5947ff1763931c73f66.tres"]
+
+[params]
+

@@ -45,5 +45,9 @@ func peepholeCheck():
 	elif State.day == 1 && !State.dayScripts.firstDay.wentToKitchen:
 		State.dayScripts.firstDay.wentToKitchen = true;
 		State.sceneManager.transtionToWithEvent("res://levels/kitchen_scene.tscn", "fromPeepholeDayOne")
+	elif State.day == 6 && !State.dayScripts.lastDay.secondPhase:
+		State.dayScripts.lastDay.secondPhase = true;
+		State.player.global_position = Vector2.ZERO
+		State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "fromPeepholeDayOne")
 	else: 
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");

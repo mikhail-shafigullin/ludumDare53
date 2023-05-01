@@ -1,0 +1,11 @@
+~ this_is_a_node_title
+
+do State.sceneManager.ihud.novel_show()
+do State.sceneManager.ihud.novel_set_image("res://characters/player/Playsholder.png")
+do State.sceneManager.set_day(false)
+
+computa
+
+do State.dayScripts.lastDay.secondPhase = true
+do State.sceneManager.transtionTo("res://levels/main_room_scene.tsc")
+=> END
