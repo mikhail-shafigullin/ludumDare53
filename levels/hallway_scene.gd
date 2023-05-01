@@ -38,16 +38,37 @@ func _on_door_to_the_kitchen_object_used():
 
 
 func peepholeCheck():
-	if State.day == 1 && !State.dayScripts.firstDay.peephole:
+	match State.day :
+		1:
+			events_dayOne()
+		2: 
+			events_daySecond()
+		6: 
+			events_daySix()
+		_: 
+			State.sceneManager.transtionTo("res://levels/long_room.tscn");
+		
+func events_dayOne():
+	if !State.dayScripts.firstDay.peephole:
 		State.sceneManager.play_dialogue("res://assets/dialogue/1day/peephole_1day.dialogue");
 		State.dayScripts.firstDay.peephole = true;
-		return true;
-	elif State.day == 1 && !State.dayScripts.firstDay.wentToKitchen:
+	elif !State.dayScripts.firstDay.wentToKitchen:
 		State.dayScripts.firstDay.wentToKitchen = true;
 		State.sceneManager.transtionToWithEvent("res://levels/kitchen_scene.tscn", "fromPeepholeDayOne")
-	elif State.day == 6 && !State.dayScripts.lastDay.secondPhase:
+	else :
+		State.sceneManager.transtionTo("res://levels/long_room.tscn");
+		
+func events_daySecond():
+	if State.dayScripts.secondDay.beginOfDay && !State.dayScripts.secondDay.peephole: 
+		State.sceneManager.play_dialogue("res://assets/dialogue/2day/peephole_day2.dialogue");
+		State.dayScripts.secondDay.peephole = true;
+	else :
+		State.sceneManager.transtionTo("res://levels/long_room.tscn");
+
+func events_daySix():
+	if State.day == 6 && !State.dayScripts.lastDay.secondPhase:
 		State.dayScripts.lastDay.secondPhase = true;
 		State.player.global_position = Vector2.ZERO
 		State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "fromPeepholeDayOne")
-	else: 
+	else :
 		State.sceneManager.transtionTo("res://levels/long_room.tscn");
