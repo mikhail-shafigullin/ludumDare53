@@ -21,9 +21,6 @@ func _ready():
 func new_day():
 
 	startFirstDay();
-	
-	if State.day == 6:
-		start_last_day()
 
 func set_day(day_state: bool):
 	night.visible = !day_state
@@ -67,17 +64,10 @@ func startFirstDay():
 		print("Start script for begin of the day");
 		playDialogueComputer_DayOne();
 
-func start_last_day():
-	if State.day == 6 && !State.dayScripts.lastDay.beginOfDay:
-		playDialogueComputer_DayLast()
 	
 func playDialogueComputer_DayOne():
 	State.sceneManager.play_dialogue("res://assets/dialogue/1day/beginOfDay.dialogue");
 	State.dayScripts.firstDay.beginOfDay = true;
-
-func playDialogueComputer_DayLast():
-	State.sceneManager.play_dialogue("res://assets/dialogue/6day/dayBegin.dialogue");
-	State.dayScripts.lastDay.beginOfDay = true;
 
 func _on_dialog_end() -> void:
 	State.sceneManager.ihud.novel_hide()

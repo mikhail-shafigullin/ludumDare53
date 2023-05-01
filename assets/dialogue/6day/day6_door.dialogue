@@ -22,6 +22,7 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka
 
 "it passes through door!?"
 
+do State.soundBoard.playNonPositionalSound("panic")
 do State.location = State.LocationState.STATE_MAIN_ROOM
 do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
 do State.dayScripts.lastDay.secondPhase = true

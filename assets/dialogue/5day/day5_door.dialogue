@@ -1,16 +1,42 @@
 ~ door_5
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
+
+do State.soundBoard.playNonPositionalSound("darkOne")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka.png")
+
+do wait(1)
+
+Что за?
+
+Что ты делаешь перед моей дверью?
+
+Кто ты? Вали отсюда!
+
+Что за херня.
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbakaLeft.png")
+[wait=1].[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbakaLeft02.png")
+[wait=1].[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEmpty.png")
+
+...
+
+Кто это был?!
+
+Открывать я дверь точно не будут...
+
+Черт, и как спать?
+
+...
+
+Ох, но надо передохнуть. Надо как-то уснуть.
+
+Надо лечь спать...
+
+do State.soundBoard.playNonPositionalSound("ePiano")
 do State.sceneManager.set_day(false)
-...[wait=0.1][next=auto]
-
-do State.soundBoard.playNonPositionalSound('placeholder')
-do State.sceneManager.ihud.novel_set_image("res://ico2.png")
-fift day bad day
-
-do State.location = State.LocationState.STATE_MAIN_ROOM
 do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
-
 
 => END

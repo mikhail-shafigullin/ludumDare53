@@ -16,7 +16,10 @@ func _ready():
 	if State.day == 5 && !State.dayScripts.fifthDay.beginOfDay:
 		startFifthDay();
 	
-	
+	if State.day == 6 && State.transitionEventKey == 'sixthDay' :
+		State.sceneManager.play_dialogue("res://assets/dialogue/6day/dayBegin.dialogue");
+		State.dayScripts.lastDay.beginOfDay = true;
+		State.transitionEventKey = '';
 	
 	State.location = State.LocationState.STATE_MAIN_ROOM;
 	
@@ -44,6 +47,7 @@ func on_bed_day5():
 		State.sceneManager.play_dialogue("res://assets/dialogue/5day/5day_begin_day.dialogue");
 	elif State.dayScripts.fifthDay.peephole:
 		State.sceneManager.play_dialogue("res://assets/dialogue/5day/5day_end_day.dialogue")
+		State.player.global_position = Vector2.ZERO
 	else:
 		State.sceneManager.play_dialogue("res://assets/dialogue/dontWantSleep.dialogue")
 

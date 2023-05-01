@@ -1,25 +1,34 @@
 ~ day_6_begining
 
-do State.sceneManager.set_day(true)
-do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
-# Computer
-work is almost done[wait=0.3][next=auto]
+do State.sceneManager.set_day(true)
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
+do State.soundBoard.playNonPositionalSound("ePiano")
+Ох, почти закончил...
 
-do State.player_is_busy = true
+Что? Уже так поздно??
+
 do State.soundBoard.playLeftFarSound('knockSound')
 *door knoking* [wait=0.3]
-I dont have time for it[next=auto]
+
+Опять...
+
+У меня нет времени на это...
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
+
 is my door locked?
 
 do State.sceneManager.set_day(false)
+do State.soundBoard.playNonPositionalSound("darkOne")
 *light goes off*
 
-I need to check it
+Что?
+
+Свет отключили?
+
+Надо проверить электрический щиток снаружи... 
 
 do State.dayScripts.lastDay.beginOfDay = true
 => END

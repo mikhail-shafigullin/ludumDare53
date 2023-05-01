@@ -6,6 +6,7 @@ var scratchSound = preload("res://audio/ScratchSound0101.wav");
 var nightKnock = preload("res://audio/NightKnock01.wav");
 var ePiano = preload("res://audio/ePiano.mp3");
 var darkOne = preload("res://audio/darkOne.mp3");
+var panic = preload("res://audio/panic.mp3");
 var placeholder = preload("res://audio/placeholder.mp3");
 
 enum SoundLocation{
@@ -23,7 +24,8 @@ var dictionary = {
 	'nightKnock': nightKnock,
 	'ePiano': ePiano,
 	'darkOne': darkOne,
-	'placeholder': placeholder
+	'placeholder': placeholder,
+	'panic': panic
 }
 
 # Called when the node enters the scene tree for the first time.

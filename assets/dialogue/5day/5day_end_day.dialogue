@@ -1,16 +1,45 @@
 ~ day5_end
 
-do State.sceneManager.set_day(true)
+do State.sceneManager.set_day(false)
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
-"I think the light will stay for tonight"
+do State.soundBoard.playNonPositionalSound("darkOne")
 
-*wakeup*
+Кто это был?
 
+Как теперь спать...
+
+Ох, надо просто закрыть глаза и ложиться спать...
+
+...
+
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night_ebaka01.png")
+
+[next=auto]
+do wait(1)
+
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night_ebaka02.png")
+
+[next=auto]
+do wait(1)
+
+[next=auto]
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night_ebaka03.png")
+
+Что за?!
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
+
+???
+
+...
+
+Показалось??
 
 do State.day = 6
-do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
-do State.sceneManager.new_day()
 do State.player_is_busy = true
+do State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "sixthDay")
 
 => END

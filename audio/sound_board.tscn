@@ -27,4 +27,4 @@ stream = ExtResource("1_4ssoo")
 max_distance = 4000.0
 
 [node name="NonPositionalSound" type="AudioStreamPlayer" parent="."]
-volume_db = -15.0
+volume_db = -10.0

@@ -43,8 +43,7 @@ func teleportTo6Day():
 	State.dayScripts = State.dayScripts_DEFAULT.duplicate(true)
 	
 	State.location = State.LocationState.STATE_DEBUG;
-	State.sceneManager.transtionTo("res://levels/main_room_scene.tscn");
-	State.sceneManager.new_day()
+	State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "sixthDay");
 
 func _on_1_day_button_pressed():
 	teleportTo1Day();
