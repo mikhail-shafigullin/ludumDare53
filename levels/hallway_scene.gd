@@ -21,6 +21,8 @@ func _process(delta):
 
 
 func _on_door_to_the_main_room_object_used():
+	if State.day == 6:
+		return
 	State.sceneManager.transtionTo("res://levels/main_room_scene.tscn");
 	print('Go to the main room');
 

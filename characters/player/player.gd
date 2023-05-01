@@ -87,3 +87,6 @@ func _on_usable_object_unhovered(usable_object):
 	hovered_item = null;
 	if State.ihud:
 		State.ihud.item_clear()
+
+func death():
+	print("player is ded :(")

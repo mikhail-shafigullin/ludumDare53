@@ -10,11 +10,15 @@ const Balloon = preload("res://assets/dialogue/ballon/balloon.tscn")
 func _ready():
 	State.sceneManager = self
 	State.soundBoard = $SoundBoard;
-	startFirstDay();
+	new_day()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func new_day():
+
+	startFirstDay();
+	
+	if State.day == 6:
+		start_last_day()
 
 func transtionTo(sceneFilePath: String):
 	transitionScenePath = sceneFilePath;
@@ -30,19 +34,19 @@ func transtionToWithEvent(sceneFilePath: String, eventKey: String):
 	transition.emit()
 
 func _on_transition_screen_transitioned():
+	if transitionScenePath == "":
+		return
 	$CurrentScene.get_child(0).queue_free();
 	var scene = load(transitionScenePath).instantiate();
 	$CurrentScene.add_child(scene);
 	State.player_is_busy = false;
 
 func play_dialogue(path_to_dialogue: String):
-	if State.player_is_busy:
-		return
-		
+
 	State.player_is_busy = true
 	
 	var balloon: Node = Balloon.instantiate()
-	$CurrentScene.get_child($CurrentScene.get_child_count() - 1).add_child(balloon)
+	$CurrentScene.add_child(balloon)
 	var dialogue = load(path_to_dialogue)
 	balloon.start(dialogue, "start")
 	balloon.tree_exiting.connect(_on_dialog_end)
@@ -51,10 +55,19 @@ func startFirstDay():
 	if State.day == 1 && !State.dayScripts.firstDay.beginOfDay:
 		print("Start script for begin of the day");
 		playDialogueComputer_DayOne();
+
+func start_last_day():
+	if State.day == 6 && !State.dayScripts.lastDay.beginOfDay:
+		playDialogueComputer_DayLast()
 	
 func playDialogueComputer_DayOne():
 	State.sceneManager.play_dialogue("res://assets/dialogue/1day/beginOfDay.dialogue");
 	State.dayScripts.firstDay.beginOfDay = true;
 
+func playDialogueComputer_DayLast():
+	State.sceneManager.play_dialogue("res://assets/dialogue/6day/dayBegin.dialogue");
+	State.dayScripts.lastDay.beginOfDay = true;
+
 func _on_dialog_end() -> void:
+	State.sceneManager.ihud.novel_hide()
 	State.player_is_busy = false

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx67m7t00qsaw"]
+[gd_scene load_steps=8 format=3 uid="uid://bx67m7t00qsaw"]
 
 [ext_resource type="SpriteFrames" uid="uid://bbw42i6mou77g" path="res://characters/monster/monster_sframes.tres" id="1_fvlc3"]
+[ext_resource type="Script" path="res://characters/monster/monster.gd" id="1_sgvym"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6v6pp"]
 radius = 11.0
@@ -12,6 +13,8 @@ height = 178.0
 
 [sub_resource type="Animation" id="Animation_sc1pp"]
 resource_name = "idle"
+length = 1.0206
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,9 +27,34 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"default"]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(8, -22), Vector2(8, -33), Vector2(8, -22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.00349066]
+}
 
 [sub_resource type="Animation" id="Animation_rkgjs"]
 resource_name = "walk"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,6 +67,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [&"walk"]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"walk", 1.0, false],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u8elk"]
 _data = {
@@ -48,6 +90,8 @@ _data = {
 
 [node name="Monster" type="CharacterBody2D"]
 z_index = 2
+script = ExtResource("1_sgvym")
+facing_left = false
 
 [node name="Floor" type="CollisionShape2D" parent="."]
 position = Vector2(0, 84)
@@ -62,14 +106,17 @@ shape = SubResource("CapsuleShape2D_w4ncb")
 
 [node name="Body" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(8, -22)
+position = Vector2(8, -26.751)
+rotation = 0.00158611
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("1_fvlc3")
 animation = &"walk"
-autoplay = "walk"
+autoplay = "default"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Body"]
-autoplay = "walk"
+autoplay = "idle"
 libraries = {
 "": SubResource("AnimationLibrary_u8elk")
 }
+
+[connection signal="area_entered" from="BodyTrigger" to="." method="_on_body_trigger_area_entered"]

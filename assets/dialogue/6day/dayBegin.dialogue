@@ -1,0 +1,8 @@
+~ this_is_a_node_title
+
+do State.sceneManager.ihud.novel_show()
+# Computer
+this headache is getting worse.
+
+do State.dayScripts.lastDay.beginOfDay = true
+=> END

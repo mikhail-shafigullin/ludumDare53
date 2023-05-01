@@ -15,7 +15,9 @@ position = Vector2(726, 238)
 texture = ExtResource("1_2r8ns")
 
 [node name="Monster" parent="Room" instance=ExtResource("3_bbblg")]
-position = Vector2(-33, 36)
+position = Vector2(275, 27)
+facing_left = true
+walk = true
 
 [node name="Left" type="StaticBody2D" parent="Room"]
 position = Vector2(-768, 0)

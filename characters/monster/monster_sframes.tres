@@ -74,6 +74,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_lvj4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_lvj4f")
 }],
 "loop": true,
 "name": &"default",

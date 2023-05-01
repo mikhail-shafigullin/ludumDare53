@@ -18,19 +18,27 @@ var day: int = 1;
 var soundBoard: Node2D;
 var transitionEventKey: String;
 
-var dayScripts = {
+var dayScripts := {
 	"firstDay": {
 		"beginOfDay": false,
 		"peephole": false,
 		"wentToKitchen": false,
 	},
+	"lastDay": {
+		"beginOfDay": false,
+		"letterTaken": false,
+	},
 };
 
-var dayScripts_DEFAULT = {
+var dayScripts_DEFAULT := {
 	"firstDay": {
 		"beginOfDay": false,
 		"peephole": false,
 		"wentToKitchen": false,
+	},
+	"lastDay": {
+		"beginOfDay": false,
+		"letterTaken": false,
 	},
 };
 
