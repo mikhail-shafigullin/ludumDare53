@@ -4,7 +4,7 @@ do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/LetterDelivery.png")
 This letter is still here
 
-"Ты умреешь через шесть дней, если не отправишь это письмо кому-нибудь еще!"
+"You will die in four days if you don't send this letter to someone else!"
 
 Take it?
 - Yes

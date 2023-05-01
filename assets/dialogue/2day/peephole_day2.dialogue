@@ -9,9 +9,9 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_EbakaPart2
 [wait=1].[next=auto]
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_DayEmpty.png")
 
-"Что? Что это?"
+"What? What's that?"
 
-"Кто там?"
+"Who's there?"
 
 do State.soundBoard.playLeftNearSound('openDoor')
 

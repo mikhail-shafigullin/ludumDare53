@@ -4,13 +4,13 @@ do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_show()
 # Computer
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
-"Вроде потихоньку заканчиваю. Но возможно еще один день понадобится"
+"I'm slowly finishing up. But I might need one more day"
 
 do State.soundBoard.playLeftFarSound('knockSound')
-Knock knock
+Knock
 
 [wait = 1]
-"Кто на этот раз?"
+"Who's there this time?"
 do State.soundBoard.playNonPositionalSound("ePiano")
 do State.ihud.novel_hide()
 

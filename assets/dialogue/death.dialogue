@@ -1,7 +1,7 @@
 ~ this_is_a_node_title
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico2.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
 You are dead
 
 What next?

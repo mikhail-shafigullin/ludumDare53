@@ -4,14 +4,14 @@ do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_show()
 # Computer
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
-Three days before the deadline
+Three days before the deadline.
 
-Но, мне кажется я успею сделать все к нему.
+But I think I'll be able to finish everything in time for the presentation.
 
 do State.soundBoard.playLeftFarSound('knockSound')
 Knock knock
 
-Not again... Кто это? Три дня не могу сконцентрироваться
+Not again... Who could it be? I haven't been able to concentrate for three days.
 do State.ihud.novel_hide()
 
 => END

@@ -4,31 +4,31 @@ do State.sceneManager.ihud.novel_show()
 do State.sceneManager.set_day(true)
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Computer.png")
 do State.soundBoard.playNonPositionalSound("ePiano")
-Ох, почти закончил...
+Oh, I'm almost finished...
 
-Что? Уже так поздно??
+What? Is it already so late??
 
 do State.soundBoard.playLeftFarSound('knockSound')
-*door knoking* [wait=0.3]
+*door knocking* [wait=0.3]
 
-Опять...
+Not again...
 
-У меня нет времени на это...
+I don't have time for this...
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
 
-is my door locked?
+Is my door locked?
 
 do State.sceneManager.set_day(false)
 do State.soundBoard.playNonPositionalSound("darkOne")
 *light goes off*
 
-Что?
+What?
 
-Свет отключили?
+The lights went out?
 
-Надо проверить электрический щиток снаружи... 
+I need to check the electric panel outside...
 
 do State.dayScripts.lastDay.beginOfDay = true
 => END

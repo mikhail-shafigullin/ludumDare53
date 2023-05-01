@@ -1,27 +1,25 @@
 ~ peephole_1day
 
 
-Кто это может быть? Я никого не жду.
+Who could that be? I'm not expecting anyone.
 
 do State.sceneManager.ihud.novel_show()
-# Peephole_with_man
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Courier.png")
-"Кто там?"
+"Who's there?"
 
-Мужчина: "Вам посылка"
+Man: "Delivery for you."
 
 do State.soundBoard.playLeftFarSound('openDoor')
 
-# Letter
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Letter.png")
-Здравствуйте!
+Hello!
 
-Вам письмо с личной доставкой.
+You have a personal delivery letter.
 
 do State.ihud.novel_hide()
 do State.player_is_busy = true
 
-Посмотрю на кухне
+I'll check the letter in the kitchen.
 
 do State.sceneManager.transtionToWithEvent("res://levels/kitchen_scene.tscn", "fromPeepholeDayOne")
 

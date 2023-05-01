@@ -1,31 +1,30 @@
 ~ trashCan_1day
 
 do State.player_is_busy = true
-Интересно, что в этом письме.
+I wonder what's in this letter.
 
 do State.player_is_busy = true
 do State.sceneManager.ihud.novel_show()
 # Letter Reading
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/LetterDelivery.png")
 do State.soundBoard.playNonPositionalSound("darkOne")
-Хмм
+Hmm...
 
-"Ты умреешь через шесть дней, если не отправишь это письмо кому-нибудь еще!"
+"You will die in four days if you don't send this letter to someone else!"
 
-Странно...
+Strange...
 
-Ох, чертовы спамеры
-# Throw to the trash can
+Oh, damn spammers.
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/ThrowLetter.png")
 
-Надо будет позвонить в эту доставочкную компанию.
+I'll have to call that delivery company.
 
-Уже личную рассылку мусорной почты занимаются.
+They are already engaged in personal spam mailings.
 
 do State.ihud.novel_hide()
 do State.dayScripts.firstDay.wentToKitchen = true
 do State.player_is_busy = true
-Ладно, надо ложиться спать.
+Alright, time to go to sleep.
 do State.soundBoard.playNonPositionalSound("ePiano")
 
 => END

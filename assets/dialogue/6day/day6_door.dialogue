@@ -10,8 +10,6 @@ do wait(1)
 [next=auto]
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka.png")
 
-do State.soundBoard.playNonPositionalSound('placeholder')
-
 do wait(1)
 [next=auto]
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka02.png")
@@ -20,12 +18,24 @@ do wait(1)
 [next=auto]
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka03.png")
 
-"it passes through door!?"
-
 do State.soundBoard.playNonPositionalSound("panic")
+What?!
+
+"It's passing through the door!!"
+
+"I need to run!"
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
+
+*run to main room*
+
+I closed the door to my room.
+
+But it's passing through the doors!
+
 do State.location = State.LocationState.STATE_MAIN_ROOM
 do State.sceneManager.transtionTo("res://levels/main_room_scene.tscn")
 do State.dayScripts.lastDay.secondPhase = true
-*run to main room*
+
 
 => END

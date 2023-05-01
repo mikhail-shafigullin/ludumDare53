@@ -2,20 +2,23 @@
 
 do State.player_is_busy = true
 do State.dayScripts.firstDay.goToSleep = true
-Ох, тяжелый день.
+Oh, what a hard day.
 
 do State.sceneManager.ihud.novel_show()
 
 do State.soundBoard.playNonPositionalSound("darkOne")
 
-# BedTime
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
-Завтра надо будет закончить работу, и можно будет отдыхать.
+Tomorrow I'll need to finish the work, and then I can rest.
 
 do State.soundBoard.playRightNearSound('scratchSound')
 ...
 
-"Уснул"
+??
+
+*Fell asleep*
+
+...
 
 do State.soundBoard.stopNonPositionalSound()
 do State.sceneManager.transtionToWithEvent("res://levels/main_room_scene.tscn", "2dayStart")

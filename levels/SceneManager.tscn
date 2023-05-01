@@ -38,6 +38,7 @@ autoplay = "fade_to_black"
 [node name="interactiveHud" parent="." instance=ExtResource("3_fcwdx")]
 
 [node name="debugMenu" parent="." instance=ExtResource("5_irqg0")]
+visible = false
 
 [node name="SoundBoard" parent="." instance=ExtResource("6_qsyu8")]
 

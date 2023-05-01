@@ -3,20 +3,40 @@ import "res://assets/dialogue/credits.dialogue" as a_credits
 ~ ending_up
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
 
-going up
+I ran upstairs as fast as I could.
 
-do State.sceneManager.ihud.novel_hide()
-do State.player_is_busy = true
+Knocking on all the doors, I shouted for help.
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_Closed.png")
+I reached the very last door in the hallway.
+
+I knocked and shouted:
+
+"Please, help me!!"
+
+And...
+
+do State.soundBoard.stopNonPositionalSound()
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_Opened.png")
+
+I saw the girl I had seen before.
+
+I realized what I had to do...
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_OpenedLetter.png")
+
+...
+
+Delivery for you...
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
+
+...
+
+Letter Ending...
 
 =>< a_credits/credits
 
 => END
-
-
-
-
-
-
-

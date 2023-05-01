@@ -6,23 +6,25 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/GirlMeeting.png"
 do State.soundBoard.stopNonPositionalSound()
 
 ...
-Вверх по лестнице поднимается девушка.
+A girl is coming up the stairs.
 
-Не думаю, что это она так веселится.
+Girl: "Is everything okay?"
 
-Девушка: "Что-то случилось?"
+I don't think she did it
 
-"Кто-то стучался ко мне в дверь. Не видели никого здесь?"
+"Somebody knocked on my door. Did you see anyone here?"
 
-Лицо девушки выразило недоумение
+The girl looked puzzled.
 
-Девушка: "Нет, никого не было."
+Girl: "No, I didn't see anyone."
 
-Девушка: "Я бы увидела кого-нибудь, если бы кто-то выходил от вас."
+Girl: "I would have seen someone if they were coming out of your place."
 
-"Хмм, странно. Спасибо. Хорошего вам дня."
+...
 
-Девушка: "Спасибо! Вам того же."
+"Hmm, strange. Thanks. Have a nice day."
+
+Girl: "Thank you! You too."
 
 do State.soundBoard.playNonPositionalSound("ePiano")
 do State.dayScripts.secondDay.meetWithWoman = true

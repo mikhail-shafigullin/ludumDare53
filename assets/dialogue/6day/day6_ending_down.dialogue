@@ -5,19 +5,25 @@ import "res://assets/dialogue/credits.dialogue" as a_credits
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down1.png")
 
-Я выбежал из дома на полной скорости
+I ran out of the house at full speed. 
 
-Я бежал и бежал километр за километром, наполненный адреналином
+I ran and ran for miles, filled with adrenaline.
 
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/novel_ending_down2.png")
-Но они найдут меня везде...
+But they will find me everywhere...
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
+
+...
+
+Street Ending...
+
+Maybe you need to take the letter from the trash and go to the top floor.
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
 
-Bad Ending...
 
-Maybe you need to take the letter from the trash can and go to the top floor.
 
 =>< a_credits/credits
 

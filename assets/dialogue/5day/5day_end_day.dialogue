@@ -5,11 +5,11 @@ do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
 do State.soundBoard.playNonPositionalSound("darkOne")
 
-Кто это был?
+Who was that?
 
-Как теперь спать...
+How can I sleep now...
 
-Ох, надо просто закрыть глаза и ложиться спать...
+Oh well, I just need to close my eyes and go to sleep...
 
 ...
 
@@ -28,7 +28,7 @@ do wait(1)
 [next=auto]
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night_ebaka03.png")
 
-Что за?!
+What the heck?!
 
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
 
@@ -36,7 +36,7 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
 
 ...
 
-Показалось??
+Was that just my imagination?
 
 do State.day = 6
 do State.player_is_busy = true

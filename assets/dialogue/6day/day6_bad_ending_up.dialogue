@@ -3,12 +3,43 @@ import "res://assets/dialogue/credits.dialogue" as a_credits
 ~ day6_ending_up
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
 
-going up
+I ran upstairs as fast as I could.
+
+Knocking on every door, I shouted for help.
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_Closed.png")
+I reached the very last door in the hallway.
+
+I knocked and yelled:
+
+"Please, help me!!"
+
+And...
+
+do State.soundBoard.stopNonPositionalSound()
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_Opened.png")
+
+I saw the woman I had seen recently.
+
+But...
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/WomenDoor_OpenedBad.png")
+Nothing can stop them now...
+
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_Black.png")
+
+...
+
+"They behind you" Ending...
+
+Maybe you need to take the letter from the trash and go to the top floor.
 
 do State.sceneManager.ihud.novel_hide()
 do State.player_is_busy = true
+
+
 
 =>< a_credits/credits
 

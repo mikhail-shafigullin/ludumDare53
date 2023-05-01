@@ -7,13 +7,13 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbaka
 
 do wait(1)
 
-Что за?
+What's going on?
 
-Что ты делаешь перед моей дверью?
+What are you doing in front of my door?
 
-Кто ты? Вали отсюда!
+Who are you? Get out of here!
 
-Что за херня.
+What the hell.
 
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEbakaLeft.png")
 [wait=1].[next=auto]
@@ -23,17 +23,17 @@ do State.sceneManager.ihud.novel_set_image("res://sprites/novel/Novel_NightEmpty
 
 ...
 
-Кто это был?!
+Who was that?!
 
-Открывать я дверь точно не будут...
+I'm definitely not opening the door...
 
-Черт, и как спать?
+Damn, how am I supposed to sleep now?
 
 ...
 
-Ох, но надо передохнуть. Надо как-то уснуть.
+Well, I need to rest. I need to find a way to fall asleep.
 
-Надо лечь спать...
+I need to go to bed...
 
 do State.soundBoard.playNonPositionalSound("ePiano")
 do State.sceneManager.set_day(false)

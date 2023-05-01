@@ -1,7 +1,11 @@
 ~ credits
 
 do State.sceneManager.ihud.novel_show()
-do State.sceneManager.ihud.novel_set_image("res://ico.png")
-thanks for playing
+do State.sceneManager.ihud.novel_set_image("res://sprites/novel/credits.png")
+Thank you for playing!
+
+What next?
+- restart day
+	do State.sceneManager.restart_day()
 
 => END

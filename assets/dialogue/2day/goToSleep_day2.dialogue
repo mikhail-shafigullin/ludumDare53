@@ -2,25 +2,27 @@
 
 
 do State.dayScripts.secondDay.goToSleep = true
-Странно, конечно! Я точно кого-то видел в дверной глазок.
+It's strange, though! I definitely saw someone in the peephole.
 
-Ладно, надо отхдохнуть
+Oh well, time to rest.
 
 # BedTime
 do State.sceneManager.ihud.novel_show()
 do State.sceneManager.ihud.novel_set_image("res://sprites/novel/night.png")
 do State.soundBoard.playNonPositionalSound("darkOne")
 
-Получается эта девушка живет выше меня.
+It seems that the girl lives above me.
 
-Надо будет завтра закончить с этой работой.
+...
+
+I'll have to finish this work tomorrow.
 
 do State.soundBoard.playRightNearSound("nightKnock")
 ...
 
-Что это?
+What's that?
 
-Звук откуда-то сверху...
+A sound from above...
 
 do State.soundBoard.stopRightNearSound()
 do State.soundBoard.stopNonPositionalSound()
